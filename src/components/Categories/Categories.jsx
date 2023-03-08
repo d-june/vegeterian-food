@@ -1,14 +1,8 @@
 import styles from "./Categories.module.scss";
+import { useSelector } from "react-redux";
 
 function Categories({ value, onChangeCategory }) {
-  const categories = [
-    "Все",
-    "Пицца",
-    "Фалафель",
-    "Роллы",
-    "Закуски",
-    "Десерты",
-  ];
+  const { categories } = useSelector((state) => state.filter);
 
   const activeCategory = styles.categoryActive + " " + styles.category;
   const normalCategory = styles.category;

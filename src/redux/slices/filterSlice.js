@@ -9,6 +9,7 @@ const initialState = {
     sortProperty: "rating",
   },
   searchValue: "",
+  categories: ["Все", "Пицца", "Фалафель", "Роллы", "Закуски", "Десерты"],
 };
 
 const filterSlice = createSlice({

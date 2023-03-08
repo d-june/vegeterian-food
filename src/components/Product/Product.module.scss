@@ -63,7 +63,17 @@
 }
 
 .productCart {
-  background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(114.93deg, rgba(97, 137, 103, 1) 5.11%, rgba(114, 164, 121, 1) 94%);
   border-radius: 10px;
   padding: 13px 19px;
+  transition: all 1s ease-out;
+  &:hover {
+    background: linear-gradient(114.93deg, rgba(97, 137, 103, 0.5) 5.11%, rgba(114, 164, 121, 0.5) 94%);
+  }
+  svg {
+    font-size: 22px;
+  }
 }

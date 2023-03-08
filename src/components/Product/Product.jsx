@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Product.module.scss";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 function Product({ imageUrl, title, description, types, sizes, price }) {
   const [activeType, setActiveType] = useState(0);
   const typesNames = ["тонкое", "традиционное"];
@@ -40,7 +41,9 @@ function Product({ imageUrl, title, description, types, sizes, price }) {
         </ul>
         <div className={styles.productBottom}>
           <div className={styles.productPrice}>{price} р.</div>
-          <button className={styles.productCart}>В корзину</button>
+          <button className={styles.productCart}>
+            В корзину <ShoppingCartOutlinedIcon />
+          </button>
         </div>
       </div>
     </div>

@@ -6,3 +6,26 @@
   grid-row-gap: 20px;
   padding: 50px 0;
 }
+
+.productsTitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 33px;
+    height: 4px;
+    left: 0px;
+    top: 16px;
+
+    background: #618967;
+    transform: rotate(90deg);
+  }
+}

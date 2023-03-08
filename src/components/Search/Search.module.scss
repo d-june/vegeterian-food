@@ -2,21 +2,34 @@
   position: relative;
 }
 
+.searchIcon {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  opacity: 0.3;
+}
+
 .searchInput {
   background: #504B4A;
   border-radius: 10px;
-  padding: 15px 48px;
+  padding: 15px 40px;
 }
 
 .clearIcon {
-  width: 30px;
-  height: 30px;
   opacity: 0.3;
   position: absolute;
   right: 10px;
-  top: 8px;
+  top: 12px;
   cursor: pointer;
   &:hover {
     opacity: 0.8;
+  }
+}
+
+input {
+  color: #CFCFCF;
+  width: 100%;
+  &:focus {
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }

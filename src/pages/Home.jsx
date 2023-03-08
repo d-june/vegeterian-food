@@ -24,9 +24,8 @@ function Home(props) {
   const isSearch = useRef(false);
   const isMounted = useRef(false);
 
-  const { categoryId, sort, currentPage, searchValue } = useSelector(
-    (state) => state.filter
-  );
+  const { categoryId, sort, currentPage, searchValue, categories } =
+    useSelector((state) => state.filter);
   const { products } = useSelector((state) => state.products);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -90,7 +89,7 @@ function Home(props) {
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
         <Sort />
       </div>
-      <h2>{categoryId}</h2>
+      <h2 className={styles.productsTitle}>{categories[categoryId]}</h2>
       <div className={styles.productsBlock}>
         {isLoading ? skeletons : productsList}
       </div>
