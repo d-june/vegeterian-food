@@ -1,0 +1,31 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  a {
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    line-height: 42px;
+    border: 2px solid #44403F;
+    cursor: pointer;
+    &:hover {
+      background: #44403F;
+    }
+  }
+  :global {
+    .previous, .next {
+      background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+      border-radius: 10px;
+    }
+    .selected {
+      background: #72A479;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.categories {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  li {
+    list-style: none;
+  }
+}
+
+.category {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  min-width: 153px;
+  font-size: 18px;
+}
+
+.categoryActive {
+  color: #FFFFFF;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 45px;
+    width: 153px;
+    height: 3px;
+    background: #618967;
+    box-shadow: 0px 5px 12px rgba(114, 164, 121, 0.3);
+    transform: rotate(-180deg);
+  }
+}

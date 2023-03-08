@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.contacts {
+
+}
+
+.cart {
+  display: flex;
+  padding: 18px;
+  background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  border-radius: 10px;
+}

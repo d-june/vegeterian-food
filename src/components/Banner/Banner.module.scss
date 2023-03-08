@@ -1,0 +1,21 @@
+.banner {
+  height: 484px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, #211F20 0%, rgba(68, 64, 63, 0) 100%);
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

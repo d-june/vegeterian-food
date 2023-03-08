@@ -1,0 +1,292 @@
+[
+  {
+    "id": 0,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/8242c73f-e1b7-4e51-b84b-af0f00796563.jpg",
+    "title": "Пицца 4 мяса",
+    "description": "Тесто для пиццы, Манная крупа, Сыр вегалайз, Соус чиз от Хай, Фарш мясной Хай, Сейтан, Колбаса салями, Курица наггетсы от Хай, Пай картофель.",
+    "types": [
+      0,
+      1
+    ],
+    "sizes": [
+      26,
+      30,
+      40
+    ],
+    "price": 590,
+    "category": 1,
+    "rating": 3
+  },
+  {
+    "id": 1,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/12fe6e15-cfa2-41f9-a183-af8c0071d437.jpg",
+    "title": "Пицца Мак чиз",
+    "description": "Тесто для пиццы, Манная крупа, Сыр чеддер, Соус бургер от Хай, Фарш мясной от Хай, Помидоры, Огурцы маринованные, Укроп.",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 640,
+    "category": 1,
+    "rating": 4
+  },
+  {
+    "id": 2,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/b78ad447-a864-4878-89d7-af0f00797ef8.jpg",
+    "title": "Пицца Четыре сыра",
+    "description": "Тесто для пиццы, Манная крупа, Соус чиз от Хай, Сыр вегалайз, Сыр мацарелла, Сыр чеддер, Сыр фила.",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 450,
+    "category": 1,
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/631a4812-f1bd-46c5-a80a-af0f0079986b.jpg",
+    "title": "Пицца Мексиканская",
+    "description": "Тесто для пиццы, Манная крупа, Соус пицца, Сыр вегалайз, Фарш мясной Хай, Соус Лечо, Фасоль красная консервированная, Кукуруза консервированная, Пай картофель.",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 420,
+    "category": 1,
+    "rating": 4
+  },
+  {
+    "id": 4,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/17e05924-f948-4f05-9134-adb0008fa21e.jpg",
+    "title": "Шаверма",
+    "description": "Тесто для пиццы, крупка, соус цезарь, сыр вегалайз, фарш не куриный (Митлесс), огурец, помидор, айсберг, лук красный, укроп.",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 390,
+    "category": 1,
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/15652967-2340-400a-b43d-adb000915e83.jpg",
+    "title": "Азиатская",
+    "description": "Тесто для пиццы, крупка, соус азиатский, сыр вегалайз, фарш не куриный (Митлесс), тофу карри, шампиньоны, помидоры, укроп.",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 450,
+    "category": 1,
+    "rating": 4
+  },
+  {
+    "id": 6,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/5c1c1d49-bb3f-492d-ba66-adb00091a6c7.jpg",
+    "title": "Грибная",
+    "description": "Тесто для пиццы, крупка, соус грибной, сыр вегалайз, шампиньоны, шиитаке, опята маринованные, томаты черри, укроп",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 465,
+    "category": 1,
+    "rating": 4
+  },
+  {
+    "id": 7,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/d28a1481-3003-4eda-99e4-adb0009fc948.jpg",
+    "title": "Паназиатская",
+    "description": "Тесто для пиццы, крупка, соус поке, сыр вегалайз, сейтан, лук, перец болгарский красный, баклажан, кабачок, шампиньоны, крахмал, помидоры, петрушка",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 450,
+    "category": 1,
+    "rating": 5
+  },
+  {
+    "id": 8,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/9f92ff7d-0d71-42a6-a454-adb0008cddcc.jpg",
+    "title": "Маргарита",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, помидоры, соус песто.",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 415,
+    "category": 1,
+    "rating": 3
+  },
+  {
+    "id": 9,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/bded071a-169b-43b8-ad9f-adb0008d0458.jpg",
+    "title": "Баклажан",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, баклажано-грибная начинка, лук красный, спаржа сладкая, помидоры, петрушка",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 435,
+    "category": 1,
+    "rating": 2
+  },
+  {
+    "id": 10,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/121166d8-b7a6-4dca-95ff-adb0008d2728.jpg",
+    "title": "Болоньезе",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, фарш соевый, помидоры, маслины, соус барбекью, петрушка",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 440,
+    "category": 1,
+    "rating": 4
+  },
+  {
+    "id": 11,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/ae699db6-c69c-407b-9d00-adb0008f7eb4.jpg",
+    "title": "А-ля Фалафель",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, лук красный, фалафель жареный, помидоры, соус азиатский, петрушка.",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 370,
+    "category": 1,
+    "rating": 6
+  },
+  {
+    "id": 12,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/74c343b2-e7ba-4d4f-86ad-adb000902fec.jpg",
+    "title": "Ветчина и грибы",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, шампиньоны, ветчина веганская, соус грибной, орегано",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 455,
+    "category": 1,
+    "rating": 4
+  },
+  {
+    "id": 13,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/2f5058c2-0722-4b48-a3bc-adb0009054cd.jpg",
+    "title": "Вегетарианка",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, помидоры, шампиньоны, перец болгарский красный, маслины, кукуруза консервированная, соус песто",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 445,
+    "category": 1,
+    "rating": 3
+  },
+  {
+    "id": 14,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/2baec48a-e745-402a-b476-adb000909c81.jpg",
+    "title": "Хот-Дог",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, лук красный, сосиски веганские, огурцы маринованные, соус ранч, лук жареный фри.",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 455,
+    "category": 1,
+    "rating": 3
+  },
+  {
+    "id": 15,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/582b0801-b243-4c57-9559-adb00090787d.jpg",
+    "title": "Сейтан",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, сейтан, тофу карри, помидоры, маслины, лук красный, орега",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 450,
+    "category": 1,
+    "rating": 5
+  },
+  {
+    "id": 16,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/c23342fe-d6fb-4155-b668-adb000910df9.jpg",
+    "title": "Не мясная",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, помидоры, салями колбаса веганская, ветчина веганская, сейтан, соус барбекью, маслины, лук красный, петрушка",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 500,
+    "category": 1,
+    "rating": 4
+  },
+  {
+    "id": 17,
+    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/2a3a1583-38f9-4c82-99ef-adb000913426.jpg",
+    "title": "Гавайская",
+    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, ветчина, шампиньоны, ананас чили, орегано",
+    "types": [
+      1
+    ],
+    "sizes": [
+      26,
+      40
+    ],
+    "price": 470,
+    "category": 1,
+    "rating": 3
+  }
+]
