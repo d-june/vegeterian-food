@@ -4,7 +4,7 @@ import { setSort } from "../../redux/slices/filterSlice";
 
 import styles from "./Sort.module.scss";
 
-const list = [
+export const sortList = [
   { name: "популярности (DESK)", sortProperty: "rating" },
   { name: "популярности (ASK)", sortProperty: "-rating" },
   { name: "цене (DESK)", sortProperty: "price" },
@@ -30,7 +30,7 @@ function Sort(props) {
       {open && (
         <div>
           <ul className={styles.sortList}>
-            {list.map((obj, i) => {
+            {sortList.map((obj, i) => {
               return (
                 <li
                   key={i}

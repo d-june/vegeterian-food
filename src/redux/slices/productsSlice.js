@@ -20,14 +20,15 @@ export const { setProducts } = productsSlice.actions;
 export const getProducts = createAsyncThunk(
   "products/getProducts",
   async function (
-    { currentPage, category, sortBy, order },
+    { currentPage, category, sortBy, order, searchValue },
     { rejectWithValue, dispatch }
   ) {
     const data = await productsAPI.getProducts(
       currentPage,
       category,
       sortBy,
-      order
+      order,
+      searchValue
     );
 
     if (data.error) {
