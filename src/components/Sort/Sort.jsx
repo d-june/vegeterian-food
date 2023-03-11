@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setSort } from "../../redux/slices/filterSlice";
 
@@ -15,6 +15,8 @@ export const sortList = [
 function Sort(props) {
   const { sort } = useSelector((state) => state.filter);
   const [open, setOpen] = useState(false);
+  const sortRef = useRef();
+
   const dispatch = useDispatch();
 
   const onSelectSort = (obj) => {
@@ -22,8 +24,18 @@ function Sort(props) {
     setOpen(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.composedPath().includes(sortRef.current)) {
+        setOpen(false);
+      }
+    };
+    document.body.addEventListener("click", handleClickOutside);
+    return () => document.body.removeEventListener("click", handleClickOutside);
+  }, []);
+
   return (
-    <div className={styles.sort}>
+    <div ref={sortRef} className={styles.sort}>
       <div className={styles.sortTitle}>
         Сортировка по: <span onClick={() => setOpen(!open)}>{sort.name}</span>
       </div>

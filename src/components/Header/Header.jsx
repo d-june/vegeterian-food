@@ -4,8 +4,12 @@ import styles from "./Header.module.scss";
 import Search from "../Search/Search";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { useSelector } from "react-redux";
 
 function Header(props) {
+  const { products, totalPrice } = useSelector((state) => state.cart);
+  const totalCount = products.reduce((sum, product) => sum + product.count, 0);
+
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
@@ -24,10 +28,15 @@ function Header(props) {
         </div>
       </div>
       <Link to="cart" className={styles.cart}>
-        <div className={styles.cartTitle}>Корзина</div>
+        {totalPrice === 0 ? (
+          <div className={styles.cartTitle}>Корзина</div>
+        ) : (
+          <div className={styles.cartTitle}>{totalPrice + " ₽"}</div>
+        )}
+
         <div className={styles.cartIcon}>
           <ShoppingCartOutlinedIcon />
-          <span>0</span>
+          <span>{totalCount}</span>
         </div>
       </Link>
     </header>

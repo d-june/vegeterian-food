@@ -1,292 +1,593 @@
 [
   {
-    "id": 0,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/8242c73f-e1b7-4e51-b84b-af0f00796563.jpg",
-    "title": "Пицца 4 мяса",
-    "description": "Тесто для пиццы, Манная крупа, Сыр вегалайз, Соус чиз от Хай, Фарш мясной Хай, Сейтан, Колбаса салями, Курица наггетсы от Хай, Пай картофель.",
-    "types": [
-      0,
-      1
-    ],
-    "sizes": [
-      26,
-      30,
-      40
-    ],
-    "price": 590,
-    "category": 1,
-    "rating": 3
-  },
-  {
     "id": 1,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/12fe6e15-cfa2-41f9-a183-af8c0071d437.jpg",
-    "title": "Пицца Мак чиз",
-    "description": "Тесто для пиццы, Манная крупа, Сыр чеддер, Соус бургер от Хай, Фарш мясной от Хай, Помидоры, Огурцы маринованные, Укроп.",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 640,
-    "category": 1,
-    "rating": 4
-  },
-  {
-    "id": 2,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/b78ad447-a864-4878-89d7-af0f00797ef8.jpg",
-    "title": "Пицца Четыре сыра",
-    "description": "Тесто для пиццы, Манная крупа, Соус чиз от Хай, Сыр вегалайз, Сыр мацарелла, Сыр чеддер, Сыр фила.",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 450,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_35.jpg",
+    "title": "Фалафель",
+    "description": "Завернутые в лаваш шарики из нута с арабскими специями и салатом (капуста, яблоко, базилик, огурец). Подается с хумусом, тахина и домашним томатным соусом",
+    "price": 420,
     "category": 1,
     "rating": 5
   },
   {
+    "id": 2,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_36.jpg",
+    "title": "Супер-Соя с тахиной",
+    "description": "Завернутые в лаваш соя, капуста, яблоко, базилик, красный перец, огурец, томатный соус. Подается с соусом тахина",
+    "price": 400,
+    "category": 1,
+    "rating": 3
+  },
+  {
     "id": 3,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/631a4812-f1bd-46c5-a80a-af0f0079986b.jpg",
-    "title": "Пицца Мексиканская",
-    "description": "Тесто для пиццы, Манная крупа, Соус пицца, Сыр вегалайз, Фарш мясной Хай, Соус Лечо, Фасоль красная консервированная, Кукуруза консервированная, Пай картофель.",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 420,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_36.jpg",
+    "title": "Супер-Соя с майонезом",
+    "description": "Завернутые в лаваш соя, капуста, яблоко, базилик, красный перец, огурец, томатный соус. Подается с майонезом",
+    "price": 400,
     "category": 1,
     "rating": 4
   },
   {
     "id": 4,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/17e05924-f948-4f05-9134-adb0008fa21e.jpg",
-    "title": "Шаверма",
-    "description": "Тесто для пиццы, крупка, соус цезарь, сыр вегалайз, фарш не куриный (Митлесс), огурец, помидор, айсберг, лук красный, укроп.",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 390,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/07/IMGL5476.jpg",
+    "title": "Гейм Чейнжер",
+    "description": "Горячий сандвич. Завернутые в лаваш цветная капуста, тофу, имбирь, молодой шпинат, кинза, специи. Подается с соусом из имбиря, арахисовой пасты, табаско, соевого соуса",
+    "price": 560,
     "category": 1,
     "rating": 5
   },
   {
     "id": 5,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/15652967-2340-400a-b43d-adb000915e83.jpg",
-    "title": "Азиатская",
-    "description": "Тесто для пиццы, крупка, соус азиатский, сыр вегалайз, фарш не куриный (Митлесс), тофу карри, шампиньоны, помидоры, укроп.",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 450,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_32.jpg",
+    "title": "Дон Педро",
+    "description": "Авокадо, руккола, фасоль, кукуруза, помидоры, листья салата, кинза, сок лимона. Подается с острым соусом и чипсами",
+    "price": 620,
     "category": 1,
-    "rating": 4
+    "rating": 5
   },
   {
     "id": 6,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/5c1c1d49-bb3f-492d-ba66-adb00091a6c7.jpg",
-    "title": "Грибная",
-    "description": "Тесто для пиццы, крупка, соус грибной, сыр вегалайз, шампиньоны, шиитаке, опята маринованные, томаты черри, укроп",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 465,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_33.jpg",
+    "title": "Дилвич",
+    "description": "Горячий сандвич. Завернутые в лаваш два вида сыра Моцарелла и Ольтермани, помидоры, орегано, безилик, черный перец. Подается с домашним майонезом",
+    "price": 620,
     "category": 1,
     "rating": 4
   },
   {
     "id": 7,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/d28a1481-3003-4eda-99e4-adb0009fc948.jpg",
-    "title": "Паназиатская",
-    "description": "Тесто для пиццы, крупка, соус поке, сыр вегалайз, сейтан, лук, перец болгарский красный, баклажан, кабачок, шампиньоны, крахмал, помидоры, петрушка",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 450,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_31.jpg",
+    "title": "Коза Ностра",
+    "description": "Завернутые в лаваш руккола, моцарелла, помидоры, перец болгарский, базилик. Подается с соусом «Французский винегрет»",
+    "price": 680,
     "category": 1,
     "rating": 5
   },
+
   {
     "id": 8,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/9f92ff7d-0d71-42a6-a454-adb0008cddcc.jpg",
-    "title": "Маргарита",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, помидоры, соус песто.",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 415,
-    "category": 1,
-    "rating": 3
-  },
-  {
-    "id": 9,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/bded071a-169b-43b8-ad9f-adb0008d0458.jpg",
-    "title": "Баклажан",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, баклажано-грибная начинка, лук красный, спаржа сладкая, помидоры, петрушка",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 435,
-    "category": 1,
-    "rating": 2
-  },
-  {
-    "id": 10,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/121166d8-b7a6-4dca-95ff-adb0008d2728.jpg",
-    "title": "Болоньезе",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, фарш соевый, помидоры, маслины, соус барбекью, петрушка",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 440,
-    "category": 1,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_23.jpg",
+    "title": "Суп «Мисо»",
+    "description": "Водоросли Вакамэ, тофу, мисо-паста, кунжут",
+    "price": 320,
+    "category": 2,
     "rating": 4
   },
   {
+    "id": 9,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_30.jpg",
+    "title": "Суп «Тыквенный»",
+    "description": "Тыква, сливки, мята, имбирь, мускатный орех. Сезонное блюдо",
+    "price": 320,
+    "category": 2,
+    "rating": 5
+  },
+  {
+    "id": 10,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_24.jpg",
+    "title": "Суп «Мунг Дал»",
+    "description": "Маш, гхи, имбирь, индийские специи. Подается с пападамом",
+    "price": 360,
+    "category": 2,
+    "rating": 3
+  },
+  {
     "id": 11,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/ae699db6-c69c-407b-9d00-adb0008f7eb4.jpg",
-    "title": "А-ля Фалафель",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, лук красный, фалафель жареный, помидоры, соус азиатский, петрушка.",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 370,
-    "category": 1,
-    "rating": 6
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_27.jpg",
+    "title": "Суп Томатный",
+    "description": "Помидоры, кокосовое молоко, оливковое масло, базилик",
+    "price": 360,
+    "category": 2,
+    "rating": 5
   },
   {
     "id": 12,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/74c343b2-e7ba-4d4f-86ad-adb000902fec.jpg",
-    "title": "Ветчина и грибы",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, шампиньоны, ветчина веганская, соус грибной, орегано",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 455,
-    "category": 1,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_25.jpg",
+    "title": "Борщ",
+    "description": "Свекла, капуста, картофель, морковь, помидоры, сладкий перец, фасоль, стебель сельдерея, барбарис, сок лимона, зелень. Подается со сметаной",
+    "price": 360,
+    "category": 2,
     "rating": 4
   },
   {
     "id": 13,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/2f5058c2-0722-4b48-a3bc-adb0009054cd.jpg",
-    "title": "Вегетарианка",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, помидоры, шампиньоны, перец болгарский красный, маслины, кукуруза консервированная, соус песто",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 445,
-    "category": 1,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_29.jpg",
+    "title": "Суп «Май Тай»",
+    "description": "Морковь, стручковый горох, стручковая фасоль, цукини, сладкий перец, чили, лемонграсс, кокосовое молоко, тофу, кунжутное масло, сок лайма, кунжут",
+    "price": 580,
+    "category": 2,
     "rating": 3
   },
   {
     "id": 14,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/2baec48a-e745-402a-b476-adb000909c81.jpg",
-    "title": "Хот-Дог",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, лук красный, сосиски веганские, огурцы маринованные, соус ранч, лук жареный фри.",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 455,
-    "category": 1,
-    "rating": 3
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2021/09/matahari-soup_02.jpg",
+    "title": "Суп Матахари",
+    "description": "Цукини, спаржа, фасоль красная, стручковый горох и фасоль, киноа, каламаты, имбирь, томатный соус, шпинат, чили, лимонный сок, пармезан",
+    "price": 680,
+    "category": 2,
+    "rating": 4
   },
+
   {
     "id": 15,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/582b0801-b243-4c57-9559-adb00090787d.jpg",
-    "title": "Сейтан",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, сейтан, тофу карри, помидоры, маслины, лук красный, орега",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 450,
-    "category": 1,
-    "rating": 5
-  },
-  {
-    "id": 16,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/c23342fe-d6fb-4155-b668-adb000910df9.jpg",
-    "title": "Не мясная",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, помидоры, салями колбаса веганская, ветчина веганская, сейтан, соус барбекью, маслины, лук красный, петрушка",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 500,
-    "category": 1,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_10.jpg",
+    "title": "Салат «Оливье»",
+    "description": "Картофель, морковь, соленые огурцы, зеленый горошек, домашний сыр, зелень, черные маслины, домашний майонез без яиц",
+    "price": 260,
+    "category": 3,
     "rating": 4
   },
   {
-    "id": 17,
-    "imageUrl": "http://cdn.arora.pro/q/upload/ab77232c-85d2-4564-82d3-8939e2ec9aa4/original/2a3a1583-38f9-4c82-99ef-adb000913426.jpg",
-    "title": "Гавайская",
-    "description": "Тесто для пиццы, крупка, соус пицца, сыр вегалайз, ветчина, шампиньоны, ананас чили, орегано",
-    "types": [
-      1
-    ],
-    "sizes": [
-      26,
-      40
-    ],
-    "price": 470,
-    "category": 1,
+    "id": 16,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_12.jpg",
+    "title": "Салат «Счастливый Веган»",
+    "description": "Пророщенный маш, сладкий перец, огурцы, помидоры, хрен, оливковое масло, зелень",
+    "price": 340,
+    "category": 3,
     "rating": 3
+  },
+  {
+    "id": 17,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_12.jpg",
+    "title": "Салат «Счастливый НеВеган» с домашним сыром и сметаной",
+    "description": "Пророщенный маш, сладкий перец, огурцы, помидоры, хрен, оливковое масло, зелень, домашний сыр, сметана",
+    "price": 380,
+    "category": 3,
+    "rating": 5
+  },
+  {
+    "id": 18,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2022/12/fusion.jpg",
+    "title": "Греческий Фюжн",
+    "description": "Авокадо, огурцы, помидоры, нут, киноа, мята, петрушка, веган фета, соус «французский винегрет»",
+    "price": 460,
+    "category": 3,
+    "rating": 5
+  },
+  {
+    "id": 19,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_07.jpg",
+    "title": "«Фалафель-салат»",
+    "description": "Шарики из нута, ромейн, авокадо, помидоры, огурцы, сладкий перец, маслины. Подается с питой и соусом «тахина»",
+    "price": 580,
+    "category": 3,
+    "rating": 6
+  },
+  {
+    "id": 20,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2021/06/kali.jpg",
+    "title": "Индийский салат “Кали”",
+    "description": "Черный нут, копченый тофу, огурец, редис, ромейн, авокадо, сок лайма, хрустящая лапша. Подается с соусом из тофу, мяты, чили, шпината и кориандра.",
+    "price": 580,
+    "category": 3,
+    "rating": 4
+  },
+  {
+    "id": 21,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_18.jpg",
+    "title": "Салат «Рукола»",
+    "description": "Рукола, сладкий перец, кедровые орешки, сыр пармезан, соус «французский винегрет», песто",
+    "price": 620,
+    "category": 3,
+    "rating": 4
+  },
+  {
+    "id": 22,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_16.jpg",
+    "title": "«Зеленый салат»",
+    "description": "Рукола, шпинат, ромэйн, листовой салат, грецкий орех, морковь, проростки маша, авокадо, апельсиновый сок. Cоус “французский винегрет”",
+    "price": 640,
+    "category": 3,
+    "rating": 5
+  },
+  {
+    "id": 23,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_17.jpg",
+    "title": "Салат «Теплый стан»",
+    "description": "Спаржа, шпинат, помидоры, брокколи, пармезан, гхи. Подается теплым",
+    "price": 640,
+    "category": 3,
+    "rating": 5
+  },
+  {
+    "id": 24,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_20.jpg",
+    "title": "Салат «Супер Боул» с тахиной",
+    "description": "Киноа, авокадо, батат, микс зеленых салатов, хумус, каламаты, маринованная свекла. Подается с тахиной",
+    "price": 740,
+    "category": 3,
+    "rating": 4
+  },
+
+  {
+    "id": 25,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_49.jpg",
+    "title": "Супер Дал",
+    "description": "Мунг Дал с помидорами. Подается с рисом и пападамом",
+    "price": 420,
+    "category": 4,
+    "rating": 5
+  },
+  {
+    "id": 26,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_51.jpg",
+    "title": "Алу Гоби",
+    "description": "Картофель, цветная капуста, зеленый горошек, помидоры, кешью, специи. Подается с абрикосовым чатни, райтой и соусом «пикл»",
+    "price": 420,
+    "category": 4,
+    "rating": 4
+  },
+  {
+    "id": 27,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2022/12/tofu_karri.jpg",
+    "title": "Тофу Карри",
+    "description": "Тофу, кешью, помидоры, зеленый горох, специи, рис, абрикосовый чатни, пикл",
+    "price": 560,
+    "category": 4,
+    "rating": 5
+  },
+  {
+    "id": 28,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_54.jpg",
+    "title": "Палак Панир",
+    "description": "Шпинат, сливки, помидоры, имбирь, жареный домашний сыр. Подается с рисом басмати, абрикосовым чатни",
+    "price": 580,
+    "category": 4,
+    "rating": 5
+  },
+  {
+    "id": 29,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_53.jpg",
+    "title": "Овощи под соусом",
+    "description": "Цветная капуста, брокколи, сладкий перец, морковь, зеленый горошек, специи, сливки. Подается с рисом и жареным сыром",
+    "price": 620,
+    "category": 4,
+    "rating": 4
+  },
+  {
+    "id": 30,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_55.jpg",
+    "title": "Индийский обед (для двоих)",
+    "description": "Мунг Дал, Палак Панир, Алу Гоби. Подается с рисом, абрикосовым чатни, райтой и соусом «пикл»",
+    "price": 1420,
+    "category": 4,
+    "rating": 4
+  },
+  {
+    "id": 31,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_57.jpg",
+    "title": "Пенне ал Аррабьата",
+    "description": "Пенне, томатный соус, чили, зелень",
+    "price": 380,
+    "category": 4,
+    "rating": 4
+  },
+  {
+    "id": 32,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_57.jpg",
+    "title": "Пенне ал Аррабьата c пармезаном",
+    "description": "Пенне, томатный соус, чили, зелень, пармезан",
+    "price": 420,
+    "category": 4,
+    "rating": 3
+  },
+  {
+    "id": 33,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_58.jpg",
+    "title": "Паста Фаджоли",
+    "description": "Ракушки, красная фасоль, помидоры, базилик",
+    "price": 520,
+    "category": 4,
+    "rating": 4
+  },
+  {
+    "id": 34,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2022/12/pasta_brokkolini.jpg",
+    "title": "Паста Брокколини",
+    "description": "Фузилли, брокколи, помидоры, вяляные помидоры, фасоль, каламаты, базилик, цукини, пармезан",
+    "price": 680,
+    "category": 4,
+    "rating": 4
+  },
+  {
+    "id": 35,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2022/12/alfredo.jpg",
+    "title": "Паста «Альфредо»",
+    "description": "Фузилли, цукини, шпинат, ольтермани, пармезан, сливки, сливочный сыр, грецкий орех, каперсы, мускатный орех",
+    "price": 720,
+    "category": 4,
+    "rating": 5
+  },
+  {
+    "id": 36,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_56.jpg",
+    "title": "Сыроедческая паста",
+    "description": "Цукини, рукола, помидоры, лимонный сок, вяленые томаты. Подается с соусом песто из семян конопли, базилика и оливкового масла",
+    "price": 720,
+    "category": 4,
+    "rating": 4
+  },
+  {
+    "id": 37,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_60.jpg",
+    "title": "Рататуй",
+    "description": "Баклажаны, цукини, морковь, сладкий перец, томатный соус, стебель сельдерея, базилик. Подается с полентой, рукколой и пармезаном",
+    "price": 720,
+    "category": 4,
+    "rating": 4
+  },
+  {
+    "id": 38,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_61.jpg",
+    "title": "Паста «Мишаня»",
+    "description": "Спагетти, цукини, стручковый горох, цедра лимона, кедровый орех, мята, песто. Подается с пармезаном",
+    "price": 720,
+    "category": 4,
+    "rating": 3
+  },
+  {
+    "id": 39,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/07/IMGL5542.jpg",
+    "title": "Брассика",
+    "description": "Брокколи, цветная капуста, тофу, карри соус, томатный соус, киноа",
+    "price": 640,
+    "category": 4,
+    "rating": 5
+  },
+
+  {
+    "id": 40,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_04.jpg",
+    "title": "Картофельные роллы",
+    "description": "Бездрожжевое тесто на сливках, картофель, домашний сыр, зелень. Подается со сметаной и соусом песто.",
+    "price": 360,
+    "category": 5,
+    "rating": 4
+  },
+
+  {
+    "id": 41,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_02.jpg",
+    "title": "Тапенад",
+    "description": "Паштет из черных и зеленых оливок, вяленых помидоров и специй. Подается с французским багетом",
+    "price": 360,
+    "category": 5,
+    "rating": 4
+  },
+  {
+    "id": 42,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_03.jpg",
+    "title": "Самосы",
+    "description": "Бездрожжевое тесто с индийскими специями, адыгейским сыром и начинкой из шпината, брокколи, картофеля, зеленого горошка, кинзы. Подается с индийским соусом",
+    "price": 380,
+    "category": 5,
+    "rating": 5
+  },
+  {
+    "id": 43,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_05.jpg",
+    "title": "Хумус",
+    "description": "Паштет из турецкого гороха, соуса «тахина», лимона, специй. Подается со свежими овощами и питой.",
+    "price": 400,
+    "category": 5,
+    "rating": 4
+  },
+  {
+    "id": 44,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2021/06/avokado-tost.jpg",
+    "title": "Авокадо тост",
+    "description": "Авокадо. Лимон. кунжутные семечки, черный перец. Подаётся на хрустящем мультизлаковом хлебе.",
+    "price": 420,
+    "category": 5,
+    "rating": 5
+  },
+  {
+    "id": 45,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2021/06/spring-roll.jpg",
+    "title": "Спринг роллы",
+    "description": "Рисовая бумага, копченый тофу, огурец, капуста, перец, авокадо, ромейн. Подается с арахисовым соусом (соевый соус, яблочный сок, арахисовое масло, тобаско)",
+    "price": 460,
+    "category": 5,
+    "rating": 4
+  },
+  {
+    "id": 46,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2022/12/cheese-plate.jpg",
+    "title": "Сырная тарелка",
+    "description": "Пармезан, моцарелла, ольтермани, дор блю, грецкие орехи, мед",
+    "price": 800,
+    "category": 5,
+    "rating": 5
+  },
+  {
+    "id": 47,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_77.jpg",
+    "title": "Печеный картофель",
+    "description": "Подается с томатным соусом",
+    "price": 280,
+    "category": 5,
+    "rating": 4
+  },
+  {
+    "id": 48,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_80.jpg",
+    "title": "Сыр со специями",
+    "description": "",
+    "price": 380,
+    "category": 5,
+    "rating": 4
+  },
+  {
+    "id": 49,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_81.jpg",
+    "title": "Сыр в сливочном соусе",
+    "description": "Домашний сыр, специи, сливки, зеленый горошек, каперсы",
+    "price": 480,
+    "category": 5,
+    "rating": 5
+  },
+  {
+    "id": 50,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_82.jpg",
+    "title": "Батат с соусом тахина",
+    "description": "",
+    "price": 480,
+    "category": 5,
+    "rating": 4
+  },
+  {
+    "id": 51,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_82.jpg",
+    "title": "Батат с тамариндовым соусом",
+    "description": "",
+    "price": 480,
+    "category": 5,
+    "rating": 4
+  },
+
+  {
+    "id": 52,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_98.jpg",
+    "title": "Яблочный пирог",
+    "description": "Пирог из яблок с черносливом, грецкими орехами, карамелью и сливками",
+    "price": 480,
+    "category": 6,
+    "rating": 3
+  },
+  {
+    "id": 53,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_95.jpg",
+    "title": "Бананика",
+    "description": "Корж с миндалем, бананом и изюмом, крем из кешью. Подается с клубникой",
+    "price": 480,
+    "category": 6,
+    "rating": 4
+  },
+  {
+    "id": 54,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_83.jpg",
+    "title": "Черный квадрат",
+    "description": "Кешью, масло какао, кокосовая стружка, кокосовое масло, финики, какао. Украшается свежими ягодами",
+    "price": 440,
+    "category": 6,
+    "rating": 5
+  },
+  {
+    "id": 55,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/a_05.jpg",
+    "title": "Панна-котта",
+    "description": "Нежный кокосовый крем со взбитыми сливками и натуральным манговом пюре",
+    "price": 420,
+    "category": 6,
+    "rating": 4
+  },
+  {
+    "id": 56,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_94.jpg",
+    "title": "Морковный торт «Фанни-Банни»",
+    "description": "Морковь, изюм, грецкий орех, имбирь, обдирная мука, сахар. Крем из сладкого сливочного сыра",
+    "price": 380,
+    "category": 6,
+    "rating": 5
+  },
+  {
+    "id": 57,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/07/IMGL5405.jpg",
+    "title": "Мия Чиа",
+    "description": "Чиа пудинг с кокосовым молоком, манго, кокосовыми чипсами, ванилью",
+    "price": 380,
+    "category": 6,
+    "rating": 4
+  },
+  {
+    "id": 58,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_93.jpg",
+    "title": "Творожная запеканка",
+    "description": "Творог, манка, изюм. Подается с клубничным вареньем и сметаной",
+    "price": 380,
+    "category": 6,
+    "rating": 4
+  },
+  {
+    "id": 59,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_92.jpg",
+    "title": "Брауни",
+    "description": "Обойная мука, какао, финики, фундук, темный шоколад. Подается с соусом из тофу, фундука, какао, миндального молока",
+    "price": 360,
+    "category": 6,
+    "rating": 5
+  },
+  {
+    "id": 60,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2022/12/ladu.jpg",
+    "title": "Ладду",
+    "description": "Фисташки, миндаль, кешью, грецкий орех, мак, арахис, финики, кокос, сахар джаггери, гхи",
+    "price": 340,
+    "category": 6,
+    "rating": 4
+  },
+  {
+    "id": 61,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_90.jpg",
+    "title": "Индийские сладости",
+    "description": "Ассорти сладостей из сухофруктов и орехов",
+    "price": 320,
+    "category": 6,
+    "rating": 5
+  },
+  {
+    "id": 62,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_89.jpg",
+    "title": "Инжирное печенье",
+    "description": "Инжир, лен, обойная мука, вод",
+    "price": 320,
+    "category": 6,
+    "rating": 4
+  },
+  {
+    "id": 63,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_84.jpg",
+    "title": "Кекс Провинциальный ореховый с изюмом",
+    "description": "Тофу, цельнозерновая мука, грецкие орехи, подсолнечное масло, изюм",
+    "price": 240,
+    "category": 6,
+    "rating": 4
+  },
+  {
+    "id": 64,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_87.jpg",
+    "title": "Коко Пепе",
+    "description": "Кокос, банан, миндаль, сахарная пудра, молоко",
+    "price": 220,
+    "category": 6,
+    "rating": 5
+  },
+  {
+    "id": 65,
+    "imageUrl": "https://botanika.spb.ru/wp-content/uploads/2020/04/menu_88.jpg",
+    "title": "Овсяное печенье",
+    "description": "Овсяные хлопья, мука, сливочное масло, грецкие орехи, семена льна, сахар, корица, шоколад",
+    "price": 220,
+    "category": 6,
+    "rating": 4
   }
 ]

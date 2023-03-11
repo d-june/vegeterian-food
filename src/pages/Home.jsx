@@ -59,7 +59,7 @@ function Home(props) {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 600);
     setIsLoading(true);
     if (!isSearch.current) {
       dispatch(

@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
+import CartBody from "../components/CartBlock/CartBody";
 
 function Cart(props) {
-    return (
-        <div></div>
-    );
+  return <CartBody />;
 }
 
 export default Cart;

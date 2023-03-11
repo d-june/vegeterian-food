@@ -51,11 +51,15 @@
 .cart {
   display: flex;
   align-items: center;
-  background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  background: rgba(97, 137, 103, 1);
   border-radius: 10px;
   color: #fff;
   font-weight: bold;
   padding: 10px;
+  transition: all 0.3s ease-out 0s;
+  &:hover {
+    background: rgba(97, 137, 103, 0.5);
+  }
 }
 .cartTitle {
   border-right: 1px solid rgba(255, 255, 255, 0.3);

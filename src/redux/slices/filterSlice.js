@@ -1,5 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { productsAPI } from "../../api/products-api";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   currentPage: 1,
@@ -9,7 +8,15 @@ const initialState = {
     sortProperty: "rating",
   },
   searchValue: "",
-  categories: ["Все", "Пицца", "Фалафель", "Роллы", "Закуски", "Десерты"],
+  categories: [
+    "Все",
+    "Сандвичи",
+    "Супы",
+    "Салаты",
+    "Вторые блюда",
+    "Закуски",
+    "Десерты",
+  ],
 };
 
 const filterSlice = createSlice({

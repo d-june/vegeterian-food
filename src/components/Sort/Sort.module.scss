@@ -1,5 +1,6 @@
 .sort {
   position: relative;
+  display: inline-block;
 }
 
 .sortTitle {
@@ -16,6 +17,7 @@
   left: 0;
   background: #504B4A;
   border-radius: 10px;
+  z-index: 5;
 }
 
 .sortType {

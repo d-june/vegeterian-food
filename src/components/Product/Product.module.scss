@@ -66,12 +66,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(114.93deg, rgba(97, 137, 103, 1) 5.11%, rgba(114, 164, 121, 1) 94%);
+  background: rgba(97, 137, 103, 1);
   border-radius: 10px;
   padding: 13px 19px;
-  transition: all 1s ease-out;
+  transition: all 0.3s ease-out 0s;
   &:hover {
-    background: linear-gradient(114.93deg, rgba(97, 137, 103, 0.5) 5.11%, rgba(114, 164, 121, 0.5) 94%);
+    background: rgba(97, 137, 103, 0.5);
   }
   svg {
     font-size: 22px;
