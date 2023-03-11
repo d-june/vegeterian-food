@@ -4,19 +4,19 @@ import ContentLoader from "react-content-loader";
 const Skeleton = (props) => (
   <ContentLoader
     speed={2}
-    width={280}
-    height={465}
-    viewBox="0 0 280 465"
-    backgroundColor="#f3f3f3"
-    foregroundColor="#ecebeb"
+    width={338}
+    height={428}
+    viewBox="0 0 338 428"
+    backgroundColor="#494544"
+    foregroundColor="#454140"
     {...props}
   >
-    <circle cx="134" cy="136" r="125" />
-    <rect x="0" y="265" rx="10" ry="10" width="280" height="20" />
-    <rect x="0" y="303" rx="10" ry="10" width="280" height="88" />
-    <rect x="0" y="412" rx="10" ry="10" width="95" height="30" />
     <rect x="108" y="277" rx="0" ry="0" width="0" height="1" />
-    <rect x="125" y="413" rx="20" ry="20" width="152" height="45" />
+    <rect x="0" y="256" rx="5" ry="5" width="120" height="20" />
+    <rect x="0" y="291" rx="10" ry="10" width="249" height="50" />
+    <rect x="199" y="356" rx="10" ry="10" width="137" height="56" />
+    <rect x="0" y="379" rx="5" ry="5" width="99" height="20" />
+    <rect x="0" y="9" rx="0" ry="0" width="338" height="227" />
   </ContentLoader>
 );
 

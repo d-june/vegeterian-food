@@ -30,25 +30,6 @@
   color: #CFCFCF;
 }
 
-.productTypes {
-  display: flex;
-  gap: 10px;
-}
-.productType {
-  cursor: pointer;
-  background: #44403F;
-  border-radius: 10px;
-  padding: 10px;
-}
-.productTypeActive {
-  background: linear-gradient(360deg, #211F20 0%, #44403F 100%);
-}
-
-.productSizes {
-  display: flex;
-  gap: 10px;
-}
-
 .productBottom {
   display: flex;
   justify-content: space-between;
@@ -77,3 +58,4 @@
     font-size: 22px;
   }
 }
+

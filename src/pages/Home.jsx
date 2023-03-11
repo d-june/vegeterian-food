@@ -7,6 +7,7 @@ import {
   setFilters,
 } from "../redux/slices/filterSlice";
 import { getProducts } from "../redux/slices/productsSlice";
+import { useNavigate } from "react-router-dom";
 
 import Product from "../components/Product/Product";
 import Skeleton from "../components/Skeleton/Skeleton";
@@ -15,8 +16,8 @@ import Sort, { sortList } from "../components/Sort/Sort";
 import Pagination from "../components/Pagination/Pagination";
 
 import styles from "../scss/Home.module.scss";
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import qs from "qs";
-import { useNavigate } from "react-router-dom";
 
 function Home(props) {
   const navigate = useNavigate();
@@ -26,9 +27,7 @@ function Home(props) {
 
   const { categoryId, sort, currentPage, searchValue, categories } =
     useSelector((state) => state.filter);
-  const { products } = useSelector((state) => state.products);
-
-  const [isLoading, setIsLoading] = useState(true);
+  const { products, status } = useSelector((state) => state.products);
 
   const order = sort.sortProperty.includes("-") ? "asc" : "desk";
   const sortBy = sort.sortProperty.replace("-", "");
@@ -60,13 +59,13 @@ function Home(props) {
 
   useEffect(() => {
     window.scrollTo(0, 600);
-    setIsLoading(true);
+
     if (!isSearch.current) {
       dispatch(
         getProducts({ currentPage, category, sortBy, order, searchValue })
       );
     }
-    setIsLoading(false);
+
     isSearch.current = false;
   }, [categoryId, sort, currentPage, searchValue]);
 
@@ -90,9 +89,22 @@ function Home(props) {
         <Sort />
       </div>
       <h2 className={styles.productsTitle}>{categories[categoryId]}</h2>
-      <div className={styles.productsBlock}>
-        {isLoading ? skeletons : productsList}
-      </div>
+      {status === "error" ? (
+        <div className={styles.productsError}>
+          <h2 className={styles.productsErrorTitle}>
+            Произошла ошибка <SentimentVeryDissatisfiedIcon />
+          </h2>
+          <p>
+            К сожалению, не удалось получить данные от сервера. Попробуйте
+            повторить попытку позже.
+          </p>
+        </div>
+      ) : (
+        <div className={styles.productsBlock}>
+          {status === "loading" ? skeletons : productsList}
+        </div>
+      )}
+
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
     </div>
   );
