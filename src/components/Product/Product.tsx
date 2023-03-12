@@ -1,23 +1,40 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import styles from "./Product.module.scss";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useDispatch, useSelector } from "react-redux";
-import { addProduct } from "../../redux/slices/cartSlice";
-function Product({ id, imageUrl, title, description, price }) {
+import {
+  addProduct,
+  CartItem,
+  selectCartProductById,
+} from "../../redux/slices/cartSlice";
+
+type ProductProps = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  description: string;
+  price: number;
+};
+const Product: FC<ProductProps> = ({
+  id,
+  imageUrl,
+  title,
+  description,
+  price,
+}) => {
   const dispatch = useDispatch();
-  const cartProduct = useSelector((state) =>
-    state.cart.products.find((obj) => obj.id === id)
-  );
+  const cartProduct = useSelector(selectCartProductById(id));
 
   const addedCount = cartProduct ? cartProduct.count : 0;
 
   const onClickAddToCart = () => {
-    const product = {
+    const product: CartItem = {
       id,
       title,
       description,
       price,
       imageUrl,
+      count: 0,
     };
     dispatch(addProduct(product));
   };
@@ -38,6 +55,6 @@ function Product({ id, imageUrl, title, description, price }) {
       </div>
     </div>
   );
-}
+};
 
 export default Product;

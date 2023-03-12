@@ -1,12 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import Banner from "../components/Banner/Banner";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import {
+  selectFilter,
   setCategoryId,
   setCurrentPage,
   setFilters,
 } from "../redux/slices/filterSlice";
-import { getProducts } from "../redux/slices/productsSlice";
+import {
+  getProducts,
+  SearchProductParams,
+  selectProductsData,
+} from "../redux/slices/productsSlice";
 import { useNavigate } from "react-router-dom";
 
 import Product from "../components/Product/Product";
@@ -18,16 +23,17 @@ import Pagination from "../components/Pagination/Pagination";
 import styles from "../scss/Home.module.scss";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import qs from "qs";
+import { useAppDispatch } from "../redux/store";
 
-function Home(props) {
+const Home: FC = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const isSearch = useRef(false);
   const isMounted = useRef(false);
 
   const { categoryId, sort, currentPage, searchValue, categories } =
-    useSelector((state) => state.filter);
-  const { products, status } = useSelector((state) => state.products);
+    useSelector(selectFilter);
+  const { products, status } = useSelector(selectProductsData);
 
   const order = sort.sortProperty.includes("-") ? "asc" : "desk";
   const sortBy = sort.sortProperty.replace("-", "");
@@ -48,12 +54,19 @@ function Home(props) {
 
   useEffect(() => {
     if (window.location.search) {
-      const params = qs.parse(window.location.search.substring(1));
-      const sort = sortList.find(
-        (obj) => obj.sortProperty === params.sortProperty
-      );
+      const params = qs.parse(
+        window.location.search.substring(1)
+      ) as unknown as SearchProductParams;
+      const sort = sortList.find((obj) => obj.sortProperty === params.sortBy);
       isSearch.current = true;
-      dispatch(setFilters({ ...params, sort }));
+      dispatch(
+        setFilters({
+          searchValue: params.searchValue,
+          categoryId: Number(params.category),
+          currentPage: Number(params.currentPage),
+          sort: sort || sortList[0],
+        })
+      );
     }
   }, []);
 
@@ -69,15 +82,17 @@ function Home(props) {
     isSearch.current = false;
   }, [categoryId, sort, currentPage, searchValue]);
 
-  const productsList = products.map((obj) => <Product key={obj.id} {...obj} />);
+  const productsList = products.map((obj: any) => (
+    <Product key={obj.id} {...obj} />
+  ));
   const skeletons = [...new Array(6)].map((_, index) => (
     <Skeleton key={index} />
   ));
-  const onChangeCategory = (id) => {
+  const onChangeCategory = (id: number) => {
     dispatch(setCategoryId(id));
   };
 
-  const onChangePage = (number) => {
+  const onChangePage = (number: number) => {
     dispatch(setCurrentPage(number));
   };
 
@@ -88,7 +103,9 @@ function Home(props) {
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
         <Sort />
       </div>
-      <h2 className={styles.productsTitle}>{categories[categoryId]}</h2>
+      {categories && (
+        <h2 className={styles.productsTitle}>{categories[categoryId]}</h2>
+      )}
       {status === "error" ? (
         <div className={styles.productsError}>
           <h2 className={styles.productsErrorTitle}>
@@ -108,6 +125,6 @@ function Home(props) {
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
     </div>
   );
-}
+};
 
 export default Home;

@@ -1,14 +1,18 @@
-import React from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 import Search from "../Search/Search";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useSelector } from "react-redux";
+import { selectCart } from "../../redux/slices/cartSlice";
 
-function Header(props) {
-  const { products, totalPrice } = useSelector((state) => state.cart);
-  const totalCount = products.reduce((sum, product) => sum + product.count, 0);
+const Header: FC = () => {
+  const { products, totalPrice } = useSelector(selectCart);
+  const totalCount = products.reduce(
+    (sum: number, product: any) => sum + product.count,
+    0
+  );
 
   return (
     <header className={styles.header}>
@@ -41,6 +45,6 @@ function Header(props) {
       </Link>
     </header>
   );
-}
+};
 
 export default Header;

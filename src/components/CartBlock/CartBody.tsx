@@ -1,18 +1,21 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem";
-import { clearCart } from "../../redux/slices/cartSlice";
+import { clearCart, selectCart } from "../../redux/slices/cartSlice";
 import CartEmpty from "../CartEmpty/CartEmpty";
 import styles from "./Cart.module.scss";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 
-function CartBody(props) {
-  const { products, totalPrice } = useSelector((state) => state.cart);
+const CartBody: FC = () => {
+  const { products, totalPrice } = useSelector(selectCart);
   const dispatch = useDispatch();
 
-  const totalCount = products.reduce((sum, product) => sum + product.count, 0);
+  const totalCount = products.reduce(
+    (sum: number, product: any) => sum + product.count,
+    0
+  );
   const minOrder = 1500;
 
   const onClearCart = () => {
@@ -40,7 +43,7 @@ function CartBody(props) {
         </div>
       </div>
       <div className={styles.cartProducts}>
-        {products.map((product) => {
+        {products.map((product: any) => {
           return <CartItem key={product.id} {...product} />;
         })}
       </div>
@@ -65,6 +68,6 @@ function CartBody(props) {
       </div>
     </div>
   );
-}
+};
 
 export default CartBody;

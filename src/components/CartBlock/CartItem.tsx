@@ -1,19 +1,35 @@
-import React from "react";
+import React, { FC } from "react";
 import { useDispatch } from "react-redux";
 import {
   addProduct,
+  CartItem,
   minusProduct,
   removeProduct,
 } from "../../redux/slices/cartSlice";
 import styles from "./Cart.module.scss";
 import ClearIcon from "@mui/icons-material/Clear";
 
-function CartItem({ id, imageUrl, title, description, count, price }) {
+type CartItemProps = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  description: string;
+  count: number;
+  price: number;
+};
+const CartItemBlock: FC<CartItemProps> = ({
+  id,
+  imageUrl,
+  title,
+  description,
+  count,
+  price,
+}) => {
   const dispatch = useDispatch();
 
   console.log(description);
   const onClickPlus = () => {
-    dispatch(addProduct({ id }));
+    dispatch(addProduct({ id } as CartItem));
   };
 
   const onClickMinus = () => {
@@ -48,6 +64,6 @@ function CartItem({ id, imageUrl, title, description, count, price }) {
       </div>
     </div>
   );
-}
+};
 
-export default CartItem;
+export default CartItemBlock;

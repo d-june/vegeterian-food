@@ -1,15 +1,20 @@
 import styles from "./Categories.module.scss";
 import { useSelector } from "react-redux";
+import { FC } from "react";
 
-function Categories({ value, onChangeCategory }) {
-  const { categories } = useSelector((state) => state.filter);
+type CategoriesProps = {
+  value: number;
+  onChangeCategory: (index: number) => void;
+};
+const Categories: FC<CategoriesProps> = ({ value, onChangeCategory }) => {
+  const { categories } = useSelector((state: any) => state.filter);
 
   const activeCategory = styles.categoryActive + " " + styles.category;
   const normalCategory = styles.category;
 
   return (
     <div className={styles.categories}>
-      {categories.map((category, index) => {
+      {categories.map((category: any, index: number) => {
         return (
           <li
             key={category}
@@ -22,6 +27,6 @@ function Categories({ value, onChangeCategory }) {
       })}
     </div>
   );
-}
+};
 
 export default Categories;

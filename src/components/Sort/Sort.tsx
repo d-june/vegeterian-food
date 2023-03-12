@@ -1,32 +1,41 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setSort } from "../../redux/slices/filterSlice";
+import {
+  selectFilter,
+  setSort,
+  SortPropertyEnum,
+} from "../../redux/slices/filterSlice";
 
 import styles from "./Sort.module.scss";
 
-export const sortList = [
-  { name: "популярности (DESK)", sortProperty: "rating" },
-  { name: "популярности (ASK)", sortProperty: "-rating" },
-  { name: "цене (DESK)", sortProperty: "price" },
-  { name: "цене (ASK)", sortProperty: "-price" },
-  { name: "алфавиту (DESK)", sortProperty: "title" },
-  { name: "алфавиту (ASK)", sortProperty: "-title" },
+type SortListType = {
+  name: string;
+  sortProperty: SortPropertyEnum;
+};
+
+export const sortList: SortListType[] = [
+  { name: "популярности (DESK)", sortProperty: SortPropertyEnum.RATING_DESC },
+  { name: "популярности (ASK)", sortProperty: SortPropertyEnum.RATING_ASK },
+  { name: "цене (DESK)", sortProperty: SortPropertyEnum.PRICE_DESK },
+  { name: "цене (ASK)", sortProperty: SortPropertyEnum.PRICE_ASK },
+  { name: "алфавиту (DESK)", sortProperty: SortPropertyEnum.TITLE_DESC },
+  { name: "алфавиту (ASK)", sortProperty: SortPropertyEnum.TITLE_ASK },
 ];
-function Sort(props) {
-  const { sort } = useSelector((state) => state.filter);
+const Sort: FC = () => {
+  const { sort } = useSelector(selectFilter);
   const [open, setOpen] = useState(false);
-  const sortRef = useRef();
+  const sortRef = useRef<HTMLDivElement>(null);
 
   const dispatch = useDispatch();
 
-  const onSelectSort = (obj) => {
+  const onSelectSort = (obj: SortListType) => {
     dispatch(setSort(obj));
     setOpen(false);
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!event.composedPath().includes(sortRef.current)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (sortRef.current && !event.composedPath().includes(sortRef.current)) {
         setOpen(false);
       }
     };
@@ -58,6 +67,6 @@ function Sort(props) {
       )}
     </div>
   );
-}
+};
 
 export default Sort;

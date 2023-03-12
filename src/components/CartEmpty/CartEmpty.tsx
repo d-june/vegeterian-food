@@ -1,9 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+
 import styles from "./CartEmpty.module.scss";
 
-function CartEmpty(props) {
+const CartEmpty: FC = () => {
   return (
     <div className={styles.cartEmpty}>
       <ShoppingCartOutlinedIcon />
@@ -13,6 +14,6 @@ function CartEmpty(props) {
       </Link>
     </div>
   );
-}
+};
 
 export default CartEmpty;

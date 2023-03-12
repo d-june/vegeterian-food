@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import CartBody from "../components/CartBlock/CartBody";
 
-function Cart(props) {
+const Cart: FC = () => {
   return <CartBody />;
-}
+};
 
 export default Cart;
