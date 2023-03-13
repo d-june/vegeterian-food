@@ -1,12 +1,16 @@
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
+import { selectCart } from "../../redux/slices/cart/selectors";
+import { clearCart } from "../../redux/slices/cart/slice";
 import CartItem from "./CartItem";
-import { clearCart, selectCart } from "../../redux/slices/cartSlice";
 import CartEmpty from "../CartEmpty/CartEmpty";
-import styles from "./Cart.module.scss";
+
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+
+import styles from "./Cart.module.scss";
 
 const CartBody: FC = () => {
   const { products, totalPrice } = useSelector(selectCart);

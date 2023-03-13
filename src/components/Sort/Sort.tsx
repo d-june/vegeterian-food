@@ -1,23 +1,16 @@
 import React, { FC, memo, useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  selectFilter,
-  setSort,
-  SortPropertyEnum,
-} from "../../redux/slices/filterSlice";
+import { useDispatch } from "react-redux";
+
+import { setSort } from "../../redux/slices/filter/slice";
+import { SortPropertyEnum, SortType } from "../../redux/slices/filter/types";
 
 import styles from "./Sort.module.scss";
 
-type SortListType = {
-  name: string;
-  sortProperty: SortPropertyEnum;
-};
-
 type SortProps = {
-  sort: SortListType;
+  sort: SortType;
 };
 
-export const sortList: SortListType[] = [
+export const sortList: SortType[] = [
   { name: "популярности (DESK)", sortProperty: SortPropertyEnum.RATING_DESC },
   { name: "популярности (ASK)", sortProperty: SortPropertyEnum.RATING_ASK },
   { name: "цене (DESK)", sortProperty: SortPropertyEnum.PRICE_DESK },
@@ -32,7 +25,7 @@ const Sort: FC<SortProps> = memo(({ sort }) => {
 
   const [open, setOpen] = useState(false);
 
-  const onSelectSort = (obj: SortListType) => {
+  const onSelectSort = (obj: SortType) => {
     dispatch(setSort(obj));
     setOpen(false);
   };

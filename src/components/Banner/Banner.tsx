@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import bannerImg from "../../assets/img/main.jpg";
+
 import styles from "./Banner.module.scss";
 
 const Banner: FC = () => {

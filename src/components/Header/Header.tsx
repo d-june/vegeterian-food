@@ -1,11 +1,14 @@
 import { FC, useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-import styles from "./Header.module.scss";
+
 import Search from "../Search/Search";
+import { selectCart } from "../../redux/slices/cart/selectors";
+
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { useSelector } from "react-redux";
-import { selectCart } from "../../redux/slices/cartSlice";
+
+import styles from "./Header.module.scss";
 
 const Header: FC = () => {
   const { products, totalPrice } = useSelector(selectCart);

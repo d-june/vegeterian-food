@@ -1,23 +1,17 @@
 import React, { FC } from "react";
 import { useDispatch } from "react-redux";
+import { CartItemType } from "../../redux/slices/cart/types";
+
+import ClearIcon from "@mui/icons-material/Clear";
 import {
   addProduct,
-  CartItem,
   minusProduct,
   removeProduct,
-} from "../../redux/slices/cartSlice";
-import styles from "./Cart.module.scss";
-import ClearIcon from "@mui/icons-material/Clear";
+} from "../../redux/slices/cart/slice";
 
-type CartItemProps = {
-  id: number;
-  imageUrl: string;
-  title: string;
-  description: string;
-  count: number;
-  price: number;
-};
-const CartItemBlock: FC<CartItemProps> = ({
+import styles from "./Cart.module.scss";
+
+const CartItemBlock: FC<CartItemType> = ({
   id,
   imageUrl,
   title,
@@ -28,7 +22,7 @@ const CartItemBlock: FC<CartItemProps> = ({
   const dispatch = useDispatch();
 
   const onClickPlus = () => {
-    dispatch(addProduct({ id } as CartItem));
+    dispatch(addProduct({ id } as CartItemType));
   };
 
   const onClickMinus = () => {

@@ -1,21 +1,16 @@
-import React, { FC, useState } from "react";
-import styles from "./Product.module.scss";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import React, { FC } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addProduct,
-  CartItem,
-  selectCartProductById,
-} from "../../redux/slices/cartSlice";
 
-type ProductProps = {
-  id: number;
-  imageUrl: string;
-  title: string;
-  description: string;
-  price: number;
-};
-const Product: FC<ProductProps> = ({
+import { addProduct } from "../../redux/slices/cart/slice";
+import { selectCartProductById } from "../../redux/slices/cart/selectors";
+import { CartItemType } from "../../redux/slices/cart/types";
+import { ProductType } from "../../redux/slices/products/types";
+
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+
+import styles from "./Product.module.scss";
+
+const Product: FC<ProductType> = ({
   id,
   imageUrl,
   title,
@@ -28,7 +23,7 @@ const Product: FC<ProductProps> = ({
   const addedCount = cartProduct ? cartProduct.count : 0;
 
   const onClickAddToCart = () => {
-    const product: CartItem = {
+    const product: CartItemType = {
       id,
       title,
       description,

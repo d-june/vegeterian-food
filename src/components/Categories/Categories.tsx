@@ -1,11 +1,13 @@
-import styles from "./Categories.module.scss";
-import { useSelector } from "react-redux";
 import { FC, memo } from "react";
+import { useSelector } from "react-redux";
+
+import styles from "./Categories.module.scss";
 
 type CategoriesProps = {
   value: number;
   onChangeCategory: (index: number) => void;
 };
+
 const Categories: FC<CategoriesProps> = memo(({ value, onChangeCategory }) => {
   const { categories } = useSelector((state: any) => state.filter);
 

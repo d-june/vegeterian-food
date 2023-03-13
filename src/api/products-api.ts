@@ -1,5 +1,6 @@
 import { instance } from "./api";
-import { Product } from "../redux/slices/productsSlice";
+import { ProductType } from "../redux/slices/products/types";
+
 export const productsAPI = {
   getProducts(
     currentPage: number,
@@ -9,7 +10,7 @@ export const productsAPI = {
     searchValue: string
   ) {
     return instance
-      .get<Product[]>(
+      .get<ProductType[]>(
         `items?page=${currentPage}&limit=8&${category}&sortBy=${sortBy}&order=${order}&search=${searchValue}`
       )
       .then((res) => res.data);

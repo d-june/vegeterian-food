@@ -1,10 +1,14 @@
 import React, { FC, useCallback, useRef, useState } from "react";
-import styles from "./Search.module.scss";
-import debounce from "lodash.debounce";
 import { useDispatch } from "react-redux";
-import { setSearchValue } from "../../redux/slices/filterSlice";
+
+import { setSearchValue } from "../../redux/slices/filter/slice";
+
+import debounce from "lodash.debounce";
+
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import CloseIcon from "@mui/icons-material/Close";
+
+import styles from "./Search.module.scss";
 
 const Search: FC = () => {
   const [value, setValue] = useState("");

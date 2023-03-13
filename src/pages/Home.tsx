@@ -1,29 +1,30 @@
 import React, { FC, useCallback, useEffect, useRef, useState } from "react";
-import Banner from "../components/Banner/Banner";
 import { useSelector } from "react-redux";
+import { useAppDispatch } from "../redux/store";
+import { useNavigate } from "react-router-dom";
+
+import Banner from "../components/Banner/Banner";
+import Product from "../components/Product/Product";
+import Skeleton from "../components/Skeleton/Skeleton";
+import Pagination from "../components/Pagination/Pagination";
+import Categories from "../components/Categories/Categories";
+import Sort, { sortList } from "../components/Sort/Sort";
+
+import { getProducts } from "../redux/slices/products/asyncActions";
 import {
-  selectFilter,
   setCategoryId,
   setCurrentPage,
   setFilters,
-} from "../redux/slices/filterSlice";
-import {
-  getProducts,
-  SearchProductParams,
-  selectProductsData,
-} from "../redux/slices/productsSlice";
-import { useNavigate } from "react-router-dom";
+} from "../redux/slices/filter/slice";
 
-import Product from "../components/Product/Product";
-import Skeleton from "../components/Skeleton/Skeleton";
-import Categories from "../components/Categories/Categories";
-import Sort, { sortList } from "../components/Sort/Sort";
-import Pagination from "../components/Pagination/Pagination";
+import { selectFilter } from "../redux/slices/filter/selectors";
+import { selectProductsData } from "../redux/slices/products/selectors";
+import { SearchProductParamsType } from "../redux/slices/products/types";
 
-import styles from "../scss/Home.module.scss";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import qs from "qs";
-import { useAppDispatch } from "../redux/store";
+
+import styles from "../scss/Home.module.scss";
 
 const Home: FC = () => {
   const navigate = useNavigate();
@@ -55,7 +56,7 @@ const Home: FC = () => {
     if (window.location.search) {
       const params = qs.parse(
         window.location.search.substring(1)
-      ) as unknown as SearchProductParams;
+      ) as unknown as SearchProductParamsType;
       const sort = sortList.find((obj) => obj.sortProperty === params.sortBy);
       isSearch.current = true;
       dispatch(
