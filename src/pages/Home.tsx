@@ -62,7 +62,7 @@ const Home: FC = () => {
       dispatch(
         setFilters({
           searchValue: params.searchValue,
-          categoryId: Number(params.category),
+          categoryId: 0,
           currentPage: Number(params.currentPage),
           sort: sort || sortList[0],
         })
@@ -71,8 +71,6 @@ const Home: FC = () => {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 600);
-
     if (!isSearch.current) {
       dispatch(
         getProducts({ currentPage, category, sortBy, order, searchValue })

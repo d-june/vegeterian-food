@@ -1,9 +1,21 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Loadable from "react-loadable";
+
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
-import { Route, Routes } from "react-router-dom";
-import NotFound from "./pages/NotFound";
-import Cart from "./pages/Cart";
+
 import "./scss/app.scss";
+
+const Cart = Loadable({
+  loader: () => import(/*webpackChunkName: "Cart"*/ "./pages/Cart"),
+  loading: () => <div>Загрузка корзины...</div>,
+});
+
+const NotFound = Loadable({
+  loader: () => import(/*webpackChunkName: "Not found"*/ "./pages/NotFound"),
+  loading: () => <div>Загрузка...</div>,
+});
 
 function App() {
   return (
