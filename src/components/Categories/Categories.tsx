@@ -1,12 +1,12 @@
 import styles from "./Categories.module.scss";
 import { useSelector } from "react-redux";
-import { FC } from "react";
+import { FC, memo } from "react";
 
 type CategoriesProps = {
   value: number;
   onChangeCategory: (index: number) => void;
 };
-const Categories: FC<CategoriesProps> = ({ value, onChangeCategory }) => {
+const Categories: FC<CategoriesProps> = memo(({ value, onChangeCategory }) => {
   const { categories } = useSelector((state: any) => state.filter);
 
   const activeCategory = styles.categoryActive + " " + styles.category;
@@ -27,6 +27,6 @@ const Categories: FC<CategoriesProps> = ({ value, onChangeCategory }) => {
       })}
     </div>
   );
-};
+});
 
 export default Categories;

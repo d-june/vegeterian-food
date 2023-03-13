@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, memo, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectFilter,
@@ -13,6 +13,10 @@ type SortListType = {
   sortProperty: SortPropertyEnum;
 };
 
+type SortProps = {
+  sort: SortListType;
+};
+
 export const sortList: SortListType[] = [
   { name: "популярности (DESK)", sortProperty: SortPropertyEnum.RATING_DESC },
   { name: "популярности (ASK)", sortProperty: SortPropertyEnum.RATING_ASK },
@@ -21,12 +25,12 @@ export const sortList: SortListType[] = [
   { name: "алфавиту (DESK)", sortProperty: SortPropertyEnum.TITLE_DESC },
   { name: "алфавиту (ASK)", sortProperty: SortPropertyEnum.TITLE_ASK },
 ];
-const Sort: FC = () => {
-  const { sort } = useSelector(selectFilter);
-  const [open, setOpen] = useState(false);
-  const sortRef = useRef<HTMLDivElement>(null);
 
+const Sort: FC<SortProps> = memo(({ sort }) => {
+  const sortRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
+
+  const [open, setOpen] = useState(false);
 
   const onSelectSort = (obj: SortListType) => {
     dispatch(setSort(obj));
@@ -67,6 +71,5 @@ const Sort: FC = () => {
       )}
     </div>
   );
-};
-
+});
 export default Sort;

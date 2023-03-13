@@ -27,7 +27,6 @@ const CartItemBlock: FC<CartItemProps> = ({
 }) => {
   const dispatch = useDispatch();
 
-  console.log(description);
   const onClickPlus = () => {
     dispatch(addProduct({ id } as CartItem));
   };
@@ -50,13 +49,17 @@ const CartItemBlock: FC<CartItemProps> = ({
         <p className={styles.itemDescription}>{description}</p>
       </div>
       <div className={styles.countBlock}>
-        <span className={styles.itemButton} onClick={onClickMinus}>
+        <button
+          disabled={count === 1}
+          className={styles.itemButton}
+          onClick={onClickMinus}
+        >
           -
-        </span>{" "}
+        </button>{" "}
         {count}{" "}
-        <span className={styles.itemButton} onClick={onClickPlus}>
+        <button className={styles.itemButton} onClick={onClickPlus}>
           +
-        </span>
+        </button>
       </div>
       <div className={styles.itemPrice}>{price * count} ₽</div>
       <div className={styles.itemDelete} onClick={onClickRemove}>

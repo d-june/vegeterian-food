@@ -130,7 +130,13 @@
   &:hover {
     background: rgba(97, 137, 103, 0.5);
   }
-
+  &:active {
+    transform: translate(0, 4px);
+  }
+  &:disabled {
+    background:#44403F;
+    transform: none;
+  }
 }
 
 .itemPrice {

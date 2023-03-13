@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useCallback, useEffect, useRef, useState } from "react";
 import Banner from "../components/Banner/Banner";
 import { useSelector } from "react-redux";
 import {
@@ -45,7 +45,6 @@ const Home: FC = () => {
         sortProperty: sort.sortProperty,
         categoryId,
         currentPage,
-        searchValue,
       });
       navigate(`?${queryString}`);
     }
@@ -88,10 +87,10 @@ const Home: FC = () => {
   const skeletons = [...new Array(6)].map((_, index) => (
     <Skeleton key={index} />
   ));
-  const onChangeCategory = (id: number) => {
-    dispatch(setCategoryId(id));
-  };
 
+  const onChangeCategory = useCallback((id: number) => {
+    dispatch(setCategoryId(id));
+  }, []);
   const onChangePage = (number: number) => {
     dispatch(setCurrentPage(number));
   };
@@ -101,7 +100,7 @@ const Home: FC = () => {
       <Banner />
       <div>
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-        <Sort />
+        <Sort sort={sort} />
       </div>
       {categories && (
         <h2 className={styles.productsTitle}>{categories[categoryId]}</h2>
