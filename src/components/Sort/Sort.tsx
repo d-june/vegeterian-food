@@ -50,27 +50,29 @@ const Sort: FC<SortProps> = memo(({ sort }) => {
   }, []);
 
   return (
-    <div ref={sortRef} className={styles.sort}>
-      <div className={styles.sortTitle}>
-        Сортировка по: <span onClick={() => setOpen(!open)}>{sort.name}</span>
-      </div>
-      {open && (
-        <div>
-          <ul className={styles.sortList}>
-            {sortList.map((obj, i) => {
-              return (
-                <li
-                  key={i}
-                  onClick={() => onSelectSort(obj)}
-                  className={styles.sortType}
-                >
-                  {obj.name}
-                </li>
-              );
-            })}
-          </ul>
+    <div className="container">
+      <div ref={sortRef} className={styles.sort}>
+        <div className={styles.sortTitle}>
+          Сортировка по: <span onClick={() => setOpen(!open)}>{sort.name}</span>
         </div>
-      )}
+        {open && (
+          <div>
+            <ul className={styles.sortList}>
+              {sortList.map((obj, i) => {
+                return (
+                  <li
+                    key={i}
+                    onClick={() => onSelectSort(obj)}
+                    className={styles.sortType}
+                  >
+                    {obj.name}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 });

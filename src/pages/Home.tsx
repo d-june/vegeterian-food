@@ -25,6 +25,7 @@ import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDiss
 import qs from "qs";
 
 import styles from "../scss/Home.module.scss";
+import Contacts from "../components/Contacts/Contacts";
 
 const Home: FC = () => {
   const navigate = useNavigate();
@@ -103,30 +104,33 @@ const Home: FC = () => {
   return (
     <div>
       <Banner />
-      <div>
-        <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-        <Sort sort={sort} />
-      </div>
-      {categories && (
-        <h2 className={styles.productsTitle}>{categories[categoryId]}</h2>
-      )}
-      {status === "error" ? (
-        <div className={styles.productsError}>
-          <h2 className={styles.productsErrorTitle}>
-            Произошла ошибка <SentimentVeryDissatisfiedIcon />
-          </h2>
-          <p>
-            К сожалению, не удалось получить данные от сервера. Попробуйте
-            повторить попытку позже.
-          </p>
+      <div className="container">
+        <div>
+          <Categories value={categoryId} onChangeCategory={onChangeCategory} />
+          <Sort sort={sort} />
         </div>
-      ) : (
-        <div className={styles.productsBlock}>
-          {status === "loading" ? skeletons : productsList}
-        </div>
-      )}
+        {categories && (
+          <h2 className={styles.productsTitle}>{categories[categoryId]}</h2>
+        )}
+        {status === "error" ? (
+          <div className={styles.productsError}>
+            <h2 className={styles.productsErrorTitle}>
+              Произошла ошибка <SentimentVeryDissatisfiedIcon />
+            </h2>
+            <p>
+              К сожалению, не удалось получить данные от сервера. Попробуйте
+              повторить попытку позже.
+            </p>
+          </div>
+        ) : (
+          <div className={styles.productsBlock}>
+            {status === "loading" ? skeletons : productsList}
+          </div>
+        )}
 
-      <Pagination currentPage={currentPage} onChangePage={onChangePage} />
+        <Pagination currentPage={currentPage} onChangePage={onChangePage} />
+      </div>
+      <Contacts />
     </div>
   );
 };

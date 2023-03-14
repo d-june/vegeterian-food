@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 
 import "./scss/app.scss";
+import Footer from "./components/Footer/Footer";
 
 const Cart = Loadable({
   loader: () => import(/*webpackChunkName: "Cart"*/ "./pages/Cart"),
@@ -19,13 +20,14 @@ const NotFound = Loadable({
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="cart" element={<Cart />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

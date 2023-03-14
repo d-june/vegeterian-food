@@ -15,18 +15,20 @@ const Categories: FC<CategoriesProps> = memo(({ value, onChangeCategory }) => {
   const normalCategory = styles.category;
 
   return (
-    <div className={styles.categories}>
-      {categories.map((category: any, index: number) => {
-        return (
-          <li
-            key={category}
-            onClick={() => onChangeCategory(index)}
-            className={index === value ? activeCategory : normalCategory}
-          >
-            {category}
-          </li>
-        );
-      })}
+    <div className="container">
+      <div className={styles.categories}>
+        {categories.map((category: any, index: number) => {
+          return (
+            <li
+              key={category}
+              onClick={() => onChangeCategory(index)}
+              className={index === value ? activeCategory : normalCategory}
+            >
+              {category}
+            </li>
+          );
+        })}
+      </div>
     </div>
   );
 });

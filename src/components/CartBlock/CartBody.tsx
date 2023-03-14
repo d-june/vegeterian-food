@@ -34,40 +34,42 @@ const CartBody: FC = () => {
 
   return (
     <div className={styles.cart}>
-      <Link to="/" className={styles.cartBack}>
-        <ArrowBackIosIcon /> к выбору блюда
-      </Link>
-      <div className={styles.cartTop}>
-        <h1 className={styles.cartTitle}>
-          Корзина <span>(Товаров в корзине: {totalCount})</span>
-        </h1>
-        <div className={styles.cartClear} onClick={onClearCart}>
-          <RemoveShoppingCartIcon />
-          Очистить корзину
-        </div>
-      </div>
-      <div className={styles.cartProducts}>
-        {products.map((product: any) => {
-          return <CartItem key={product.id} {...product} />;
-        })}
-      </div>
-      <div className={styles.cartBottomContainer}>
-        <div className={styles.cartBottom}>
-          <div className={styles.cartBottomBody}>
-            <div className={styles.cartBottomPrice}>
-              Итого: <span>{totalPrice} ₽</span>
-            </div>
-            {minOrder - totalPrice > 0 && (
-              <div className={styles.cartMinOrder}>
-                <p>
-                  До бесплатной доставки не хватает{" "}
-                  <span>{minOrder - totalPrice} ₽</span>
-                </p>
-                <p>Минимальная сумма заказа {minOrder} ₽</p>
-              </div>
-            )}
+      <div className="container">
+        <Link to="/" className={styles.cartBack}>
+          <ArrowBackIosIcon /> к выбору блюда
+        </Link>
+        <div className={styles.cartTop}>
+          <h1 className={styles.cartTitle}>
+            Корзина <span>(Товаров в корзине: {totalCount})</span>
+          </h1>
+          <div className={styles.cartClear} onClick={onClearCart}>
+            <RemoveShoppingCartIcon />
+            Очистить корзину
           </div>
-          <button className={styles.cartOrderButton}>Оформить заказ</button>
+        </div>
+        <div className={styles.cartProducts}>
+          {products.map((product: any) => {
+            return <CartItem key={product.id} {...product} />;
+          })}
+        </div>
+        <div className={styles.cartBottomContainer}>
+          <div className={styles.cartBottom}>
+            <div className={styles.cartBottomBody}>
+              <div className={styles.cartBottomPrice}>
+                Итого: <span>{totalPrice} ₽</span>
+              </div>
+              {minOrder - totalPrice > 0 && (
+                <div className={styles.cartMinOrder}>
+                  <p>
+                    До бесплатной доставки не хватает{" "}
+                    <span>{minOrder - totalPrice} ₽</span>
+                  </p>
+                  <p>Минимальная сумма заказа {minOrder} ₽</p>
+                </div>
+              )}
+            </div>
+            <button className={styles.cartOrderButton}>Оформить заказ</button>
+          </div>
         </div>
       </div>
     </div>

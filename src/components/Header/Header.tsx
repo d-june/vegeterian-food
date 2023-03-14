@@ -30,37 +30,39 @@ const Header: FC = () => {
   }, [products]);
 
   return (
-    <header className={styles.header}>
-      <Link to="/" className={styles.logo}>
-        Vegetarian food
-      </Link>
-      <div className={styles.search}>
-        {location.pathname !== "/cart" && <Search />}
-      </div>
-      <div className={styles.contacts}>
-        <div className={styles.contactsIcon}>
-          <PhoneInTalkOutlinedIcon />
-        </div>
-        <div className={styles.contactsBody}>
-          <div className={styles.contactsTitle}>Контакты</div>
-          <Link to="tel:+79175105759">+7(917)510-57-59</Link>
-        </div>
-      </div>
-      {location.pathname !== "/cart" && (
-        <Link to="cart" className={styles.cart}>
-          {totalPrice === 0 ? (
-            <div className={styles.cartTitle}>Корзина</div>
-          ) : (
-            <div className={styles.cartTitle}>{totalPrice + " ₽"}</div>
-          )}
-
-          <div className={styles.cartIcon}>
-            <ShoppingCartOutlinedIcon />
-            <span>{totalCount}</span>
-          </div>
+    <div className="container">
+      <header className={styles.header}>
+        <Link to="/" className={styles.logo}>
+          Vegetarian food
         </Link>
-      )}
-    </header>
+        <div className={styles.search}>
+          {location.pathname !== "/cart" && <Search />}
+        </div>
+        <div className={styles.contacts}>
+          <div className={styles.contactsIcon}>
+            <PhoneInTalkOutlinedIcon />
+          </div>
+          <div className={styles.contactsBody}>
+            <div className={styles.contactsTitle}>Контакты</div>
+            <Link to="tel:+79175105759">+7(917)510-57-59</Link>
+          </div>
+        </div>
+        {location.pathname !== "/cart" && (
+          <Link to="cart" className={styles.cart}>
+            {totalPrice === 0 ? (
+              <div className={styles.cartTitle}>Корзина</div>
+            ) : (
+              <div className={styles.cartTitle}>{totalPrice + " ₽"}</div>
+            )}
+
+            <div className={styles.cartIcon}>
+              <ShoppingCartOutlinedIcon />
+              <span>{totalCount}</span>
+            </div>
+          </Link>
+        )}
+      </header>
+    </div>
   );
 };
 
