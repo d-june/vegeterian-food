@@ -1,18 +1,18 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { ProductType, SearchProductParamsType } from "./types";
+import { ProductType, SearchProductParamsThunkType } from "./types";
 import { productsAPI } from "../../../api/products-api";
 
 export const getProducts = createAsyncThunk<
   ProductType[],
-  SearchProductParamsType
+  SearchProductParamsThunkType
 >("products/getProducts", async (params) => {
-  const { currentPage, category, sortBy, order, searchValue } = params;
+  const { currentPage, category, sortBy, order, search } = params;
   const data = await productsAPI.getProducts(
     currentPage,
     category,
     sortBy,
     order,
-    searchValue
+    search
   );
   return data;
 });

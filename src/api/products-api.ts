@@ -7,11 +7,11 @@ export const productsAPI = {
     category: string,
     sortBy: string,
     order: string,
-    searchValue: string
+    search: string
   ) {
     return instance
       .get<ProductType[]>(
-        `items?page=${currentPage}&limit=8&${category}&sortBy=${sortBy}&order=${order}&search=${searchValue}`
+        `items?page=${currentPage}&limit=8&${category}&sortBy=${sortBy}&order=${order}&${search}`
       )
       .then((res) => res.data);
   },

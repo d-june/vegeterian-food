@@ -17,10 +17,18 @@ export interface ProductsSliceState {
   status: StatusEnum;
 }
 
-export type SearchProductParamsType = {
+export type SearchProductParamsThunkType = {
   currentPage: number;
   category: string;
-  sortBy: string;
   order: string;
+  sortBy: string;
+  search: string;
+};
+
+export type SearchProductParamsType = {
+  currentPage: number;
+  categoryId: number;
+  order: string;
+  sortProperty: string;
   searchValue: string;
 };

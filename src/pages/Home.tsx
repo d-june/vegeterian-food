@@ -1,7 +1,7 @@
 import React, { FC, useCallback, useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "../redux/store";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import Banner from "../components/Banner/Banner";
 import Product from "../components/Product/Product";
@@ -31,14 +31,48 @@ const Home: FC = () => {
   const dispatch = useAppDispatch();
   const isSearch = useRef(false);
   const isMounted = useRef(false);
+  const location = useLocation();
 
   const { categoryId, sort, currentPage, searchValue, categories } =
     useSelector(selectFilter);
   const { products, status } = useSelector(selectProductsData);
 
-  const order = sort.sortProperty.includes("-") ? "asc" : "desk";
-  const sortBy = sort.sortProperty.replace("-", "");
-  const category = categoryId > 0 ? `category=${categoryId}` : "";
+  const fetchProducts = () => {
+    const order = sort.sortProperty.includes("-") ? "asc" : "desc";
+    const sortBy = sort.sortProperty.replace("-", "");
+    const category = categoryId > 0 ? `category=${categoryId}` : "";
+    const search = searchValue ? `search=${searchValue}` : "";
+    dispatch(getProducts({ currentPage, category, sortBy, order, search }));
+  };
+
+  useEffect(() => {
+    if (location.search) {
+      const params = qs.parse(
+        location.search.substring(1)
+      ) as unknown as SearchProductParamsType;
+
+      const sort = sortList.find(
+        (obj) => obj.sortProperty === params.sortProperty
+      );
+
+      dispatch(
+        setFilters({
+          searchValue: params.searchValue as string,
+          categoryId: Number(params.categoryId),
+          currentPage: Number(params.currentPage),
+          sort: sort || sortList[0],
+        })
+      );
+      isSearch.current = true;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isSearch.current) {
+      fetchProducts();
+    }
+    isSearch.current = false;
+  }, [categoryId, sort.sortProperty, currentPage, searchValue]);
 
   useEffect(() => {
     if (isMounted.current) {
@@ -50,35 +84,7 @@ const Home: FC = () => {
       navigate(`?${queryString}`);
     }
     isMounted.current = true;
-  }, [categoryId, sort, currentPage, searchValue]);
-
-  useEffect(() => {
-    if (window.location.search) {
-      const params = qs.parse(
-        window.location.search.substring(1)
-      ) as unknown as SearchProductParamsType;
-      const sort = sortList.find((obj) => obj.sortProperty === params.sortBy);
-      isSearch.current = true;
-      dispatch(
-        setFilters({
-          searchValue: params.searchValue,
-          categoryId: 0,
-          currentPage: Number(params.currentPage),
-          sort: sort || sortList[0],
-        })
-      );
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!isSearch.current) {
-      dispatch(
-        getProducts({ currentPage, category, sortBy, order, searchValue })
-      );
-    }
-
-    isSearch.current = false;
-  }, [categoryId, sort, currentPage, searchValue]);
+  }, [categoryId, sort.sortProperty, currentPage, searchValue]);
 
   const productsList = products.map((obj: any) => (
     <Product key={obj.id} {...obj} />

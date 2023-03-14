@@ -11,12 +11,21 @@ type SortProps = {
 };
 
 export const sortList: SortType[] = [
-  { name: "популярности (DESK)", sortProperty: SortPropertyEnum.RATING_DESC },
-  { name: "популярности (ASK)", sortProperty: SortPropertyEnum.RATING_ASK },
-  { name: "цене (DESK)", sortProperty: SortPropertyEnum.PRICE_DESK },
-  { name: "цене (ASK)", sortProperty: SortPropertyEnum.PRICE_ASK },
-  { name: "алфавиту (DESK)", sortProperty: SortPropertyEnum.TITLE_DESC },
-  { name: "алфавиту (ASK)", sortProperty: SortPropertyEnum.TITLE_ASK },
+  {
+    name: "популярности (по убыванию)",
+    sortProperty: SortPropertyEnum.RATING_DESC,
+  },
+  {
+    name: "популярности (по возрастанию)",
+    sortProperty: SortPropertyEnum.RATING_ASK,
+  },
+  { name: "цене (по убыванию)", sortProperty: SortPropertyEnum.PRICE_DESK },
+  { name: "цене (по возрастанию)", sortProperty: SortPropertyEnum.PRICE_ASK },
+  { name: "алфавиту (по убыванию)", sortProperty: SortPropertyEnum.TITLE_DESC },
+  {
+    name: "алфавиту (по возрастанию)",
+    sortProperty: SortPropertyEnum.TITLE_ASK,
+  },
 ];
 
 const Sort: FC<SortProps> = memo(({ sort }) => {
