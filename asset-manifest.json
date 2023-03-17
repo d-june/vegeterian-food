@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/vegeterian-food/static/css/main.335ea4b3.css",
+    "main.js": "/vegeterian-food/static/js/main.4ab6e9c9.js",
+    "Cart.css": "/vegeterian-food/static/css/Cart.e2052245.chunk.css",
+    "Cart.js": "/vegeterian-food/static/js/Cart.a047d5c9.chunk.js",
+    "Not found.js": "/vegeterian-food/static/js/Not found.34cdf7f9.chunk.js",
+    "static/media/Map.jpg": "/vegeterian-food/static/media/Map.b1e7a9723197cf841885.jpg",
+    "static/media/main.jpg": "/vegeterian-food/static/media/main.717ad2a23f09c5450da5.jpg",
+    "index.html": "/vegeterian-food/index.html",
+    "main.335ea4b3.css.map": "/vegeterian-food/static/css/main.335ea4b3.css.map",
+    "main.4ab6e9c9.js.map": "/vegeterian-food/static/js/main.4ab6e9c9.js.map",
+    "Cart.e2052245.chunk.css.map": "/vegeterian-food/static/css/Cart.e2052245.chunk.css.map",
+    "Cart.a047d5c9.chunk.js.map": "/vegeterian-food/static/js/Cart.a047d5c9.chunk.js.map",
+    "Not found.34cdf7f9.chunk.js.map": "/vegeterian-food/static/js/Not found.34cdf7f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.335ea4b3.css",
+    "static/js/main.4ab6e9c9.js"
+  ]
+}
