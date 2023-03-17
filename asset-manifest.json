@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/vegeterian-food/static/css/main.b7aa6a4f.css",
-    "main.js": "/vegeterian-food/static/js/main.3d698c22.js",
+    "main.css": "/vegeterian-food/static/css/main.4a751bd3.css",
+    "main.js": "/vegeterian-food/static/js/main.74a1c38b.js",
     "Cart.css": "/vegeterian-food/static/css/Cart.e2052245.chunk.css",
     "Cart.js": "/vegeterian-food/static/js/Cart.a047d5c9.chunk.js",
     "Not found.js": "/vegeterian-food/static/js/Not found.34cdf7f9.chunk.js",
     "static/media/Map.jpg": "/vegeterian-food/static/media/Map.b1e7a9723197cf841885.jpg",
     "static/media/main.jpg": "/vegeterian-food/static/media/main.717ad2a23f09c5450da5.jpg",
     "index.html": "/vegeterian-food/index.html",
-    "main.b7aa6a4f.css.map": "/vegeterian-food/static/css/main.b7aa6a4f.css.map",
-    "main.3d698c22.js.map": "/vegeterian-food/static/js/main.3d698c22.js.map",
+    "main.4a751bd3.css.map": "/vegeterian-food/static/css/main.4a751bd3.css.map",
+    "main.74a1c38b.js.map": "/vegeterian-food/static/js/main.74a1c38b.js.map",
     "Cart.e2052245.chunk.css.map": "/vegeterian-food/static/css/Cart.e2052245.chunk.css.map",
     "Cart.a047d5c9.chunk.js.map": "/vegeterian-food/static/js/Cart.a047d5c9.chunk.js.map",
     "Not found.34cdf7f9.chunk.js.map": "/vegeterian-food/static/js/Not found.34cdf7f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7aa6a4f.css",
-    "static/js/main.3d698c22.js"
+    "static/css/main.4a751bd3.css",
+    "static/js/main.74a1c38b.js"
   ]
 }
