@@ -1,10 +1,20 @@
 .categories {
+
+  background: rgba(255, 255, 255, 0.01);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+
+}
+
+.categoriesWrapper {
   display: flex;
   justify-content: space-between;
-  padding: 28px 80px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 28px 0;
   li {
     list-style: none;
+  }
+  @media (max-width: 1100px) {
+    overflow-x : auto;
   }
 }
 

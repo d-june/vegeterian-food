@@ -1,5 +1,6 @@
 .footer {
-  background: linear-gradient(270.7deg, #44403F 0.4%, #211F20 100%);
+  background: linear-gradient(0deg, #44403F -32.09%, #211F20 100%);
+
   padding: 40px 0;
 }
 
@@ -7,6 +8,11 @@
   display: flex;
   align-items: center;
   gap: 86px;
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 50px;
+    text-align: center;
+  }
 }
 
 .footerLeft {
@@ -35,9 +41,10 @@
 .footerList {
   display: flex;
   gap: 30px;
+  font-size: 20px;
   li {
     font-weight: 500;
-    font-size: 20px;
+
     line-height: 24px;
     color: #FFFFFF;
     transition: color 0.3s ease-in-out 0s;
@@ -45,5 +52,8 @@
       color: #72A479;
     }
   }
-
+  @media (max-width: 500px) {
+    gap: 20px;
+    font-size: 16px;
+  }
 }

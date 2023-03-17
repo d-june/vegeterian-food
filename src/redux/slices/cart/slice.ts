@@ -32,12 +32,14 @@ const cartSlice = createSlice({
       );
       if (findProduct) {
         findProduct.count--;
+        state.totalPrice = calcTotalPrice(state.products);
       }
     },
     removeProduct(state, action: PayloadAction<number>) {
       state.products = state.products.filter(
         (obj) => obj.id !== action.payload
       );
+      state.totalPrice = calcTotalPrice(state.products);
     },
     clearCart(state) {
       state.products = [];

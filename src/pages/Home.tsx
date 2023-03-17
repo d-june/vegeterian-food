@@ -90,7 +90,7 @@ const Home: FC = () => {
   const productsList = products.map((obj: any) => (
     <Product key={obj.id} {...obj} />
   ));
-  const skeletons = [...new Array(6)].map((_, index) => (
+  const skeletons = [...new Array(8)].map((_, index) => (
     <Skeleton key={index} />
   ));
 
@@ -102,13 +102,14 @@ const Home: FC = () => {
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Banner />
+
+      <div>
+        <Categories value={categoryId} onChangeCategory={onChangeCategory} />
+        <Sort sort={sort} />
+      </div>
       <div className="container">
-        <div>
-          <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-          <Sort sort={sort} />
-        </div>
         {categories && (
           <h2 className={styles.productsTitle}>{categories[categoryId]}</h2>
         )}
@@ -127,9 +128,9 @@ const Home: FC = () => {
             {status === "loading" ? skeletons : productsList}
           </div>
         )}
-
         <Pagination currentPage={currentPage} onChangePage={onChangePage} />
       </div>
+
       <Contacts />
     </div>
   );

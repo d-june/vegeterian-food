@@ -30,39 +30,49 @@ const Header: FC = () => {
   }, [products]);
 
   return (
-    <div className="container">
-      <header className={styles.header}>
-        <Link to="/" className={styles.logo}>
-          Vegetarian food
-        </Link>
-        <div className={styles.search}>
-          {location.pathname !== "/cart" && <Search />}
-        </div>
-        <div className={styles.contacts}>
-          <div className={styles.contactsIcon}>
-            <PhoneInTalkOutlinedIcon />
-          </div>
-          <div className={styles.contactsBody}>
-            <div className={styles.contactsTitle}>Контакты</div>
-            <Link to="tel:+79175105759">+7(917)510-57-59</Link>
-          </div>
-        </div>
-        {location.pathname !== "/cart" && (
-          <Link to="cart" className={styles.cart}>
-            {totalPrice === 0 ? (
-              <div className={styles.cartTitle}>Корзина</div>
-            ) : (
-              <div className={styles.cartTitle}>{totalPrice + " ₽"}</div>
-            )}
-
-            <div className={styles.cartIcon}>
-              <ShoppingCartOutlinedIcon />
-              <span>{totalCount}</span>
-            </div>
+    <header className={styles.header}>
+      <div className="container">
+        <div className={styles.headerWrapper}>
+          <Link to="/" className={styles.logo}>
+            Vegetarian food
           </Link>
-        )}
-      </header>
-    </div>
+          <div className={styles.search + " " + styles.searchDesktop}>
+            {location.pathname !== "/cart" && <Search />}
+          </div>
+          <div className={styles.contacts}>
+            <div className={styles.contactsIcon}>
+              <PhoneInTalkOutlinedIcon />
+            </div>
+            <div className={styles.contactsBody}>
+              <div className={styles.contactsTitle}>Контакты</div>
+              <Link to="tel:+79175105759">+7(917)510-57-59</Link>
+            </div>
+          </div>
+          {location.pathname !== "/cart" && (
+            <Link to="cart" className={styles.cart}>
+              {totalPrice === 0 ? (
+                <div className={styles.cartTitle}>Корзина</div>
+              ) : (
+                <div className={styles.cartTitle}>{totalPrice + " ₽"}</div>
+              )}
+
+              <div className={styles.cartTotalCount}>
+                {totalCount > 0 ? (
+                  <span>{totalCount}</span>
+                ) : (
+                  <ShoppingCartOutlinedIcon />
+                )}
+              </div>
+            </Link>
+          )}
+        </div>
+        <div>
+          <div className={styles.search + " " + styles.searchMobile}>
+            {location.pathname !== "/cart" && <Search />}
+          </div>
+        </div>
+      </div>
+    </header>
   );
 };
 

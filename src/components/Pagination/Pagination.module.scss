@@ -2,30 +2,36 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 60px;
+  cursor: pointer;
   li {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
   }
   a {
     text-align: center;
     width: 45px;
     height: 45px;
     line-height: 42px;
-    border: 2px solid #44403F;
-    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out 0s;
     &:hover {
-      background: #44403F;
+      background: rgba(97, 137, 103, 0.5);
     }
   }
   :global {
     .previous, .next {
-      background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+      background: rgba(97, 137, 103, 1);
       border-radius: 10px;
+      transition: background 0.3s ease-in-out 0s;
+      &:hover {
+        background: rgba(97, 137, 103, 0.5);
+      }
     }
     .selected {
-      background: #72A479;
+      background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+      border-radius: 10px;
     }
   }
 }

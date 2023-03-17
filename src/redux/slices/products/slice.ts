@@ -1,6 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { ProductsSliceState, ProductType, StatusEnum } from "./types";
+import {
+  ProductsSliceState,
+  ProductType,
+  SearchProductParamsThunkType,
+  StatusEnum,
+} from "./types";
 import { getProducts } from "./asyncActions";
 
 const initialState: ProductsSliceState = {

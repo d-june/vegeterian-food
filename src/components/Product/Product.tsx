@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { addProduct } from "../../redux/slices/cart/slice";
+import { addProduct, minusProduct } from "../../redux/slices/cart/slice";
 import { selectCartProductById } from "../../redux/slices/cart/selectors";
 import { CartItemType } from "../../redux/slices/cart/types";
 import { ProductType } from "../../redux/slices/products/types";
@@ -34,19 +34,40 @@ const Product: FC<ProductType> = ({
     dispatch(addProduct(product));
   };
 
+  const onClickPlus = () => {
+    dispatch(addProduct({ id } as CartItemType));
+  };
+
+  const onClickMinus = () => {
+    dispatch(minusProduct(id));
+  };
+
   return (
     <div className={styles.product}>
       <img src={imageUrl} alt="Pizza image" className={styles.productImage} />
-      <div className={styles.productContent}>
-        <h4 className={styles.productName}>{title}</h4>
-        <p className={styles.productDescription}>{description}</p>
-        <div className={styles.productBottom}>
-          <div className={styles.productPrice}>{price} р.</div>
-          <button onClick={onClickAddToCart} className={styles.productCart}>
-            В корзину {addedCount > 0 && <span>{addedCount}</span>}
-            <ShoppingCartOutlinedIcon />
-          </button>
-        </div>
+      <h4 className={styles.productName}>{title}</h4>
+      <p className={styles.productDescription}>{description}</p>
+      <div>
+        {addedCount > 0 ? (
+          <div className={styles.productBottom}>
+            <button onClick={onClickMinus} className={styles.productButton}>
+              -
+            </button>
+            <div className={styles.productPrice}>{price} р.</div>
+            <button onClick={onClickPlus} className={styles.productButton}>
+              +
+            </button>
+            <span className={styles.productCount}>{addedCount}</span>
+          </div>
+        ) : (
+          <div className={styles.productBottom}>
+            <div className={styles.productPrice}>{price} р.</div>
+            <button onClick={onClickAddToCart} className={styles.productCart}>
+              В корзину {addedCount > 0 && <span>{addedCount}</span>}
+              <ShoppingCartOutlinedIcon />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

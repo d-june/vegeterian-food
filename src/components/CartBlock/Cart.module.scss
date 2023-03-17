@@ -7,6 +7,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 950px) {
+    padding: 20px 0px 50px 0px;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
 }
 .cartBack {
   display: flex;
@@ -17,6 +25,9 @@
   transition: color 0.3s ease-in-out 0s;
   &:hover {
     color: rgba(97, 137, 103, 1);
+  }
+  @media (max-width: 950px) {
+    padding-left: 0;
   }
 }
 
@@ -36,7 +47,6 @@
     height: 4px;
     left: -10px;
     top: 16px;
-
     background: #618967;
     transform: rotate(90deg);
   }
@@ -46,6 +56,10 @@
     line-height: 18px;
     text-transform: lowercase;
     color: #72A479;
+  }
+  @media (max-width: 950px) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -75,16 +89,39 @@
 
 .cartItem {
   display: grid;
-  grid-template-columns: 117px 1fr 120px 120px 120px;
+  grid-template-columns: 117px 1fr 120px 120px 40px;
   align-items: center;
   gap: 40px;
   padding: 20px 40px 20px 20px;
   &:not(:last-child) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
+  @media (max-width: 950px) {
+    grid-template-columns: 117px 1fr 120px 100px 40px;
+    gap: 20px;
+    padding: 20px;
+  }
+  @media (max-width: 730px) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  @media (max-width: 520px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .itemImage {
+  width: 117px;
+  height: 86px;
+
+  @media (max-width: 730px) {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+  }
+  @media (max-width: 520px) {
+    width: 100%;
+    height: 200px;
+  }
 
 }
 
@@ -93,6 +130,10 @@
   flex-direction: column;
   gap: 5px;
   max-width: 265px;
+  @media (max-width: 730px) {
+    grid-column: 4 / 12;
+    grid-row: 1 / 2;
+  }
 }
 
 .itemTitle {
@@ -106,6 +147,9 @@
   font-size: 12px;
   line-height: 14px;
   color: #A6A7AB;
+  @media (max-width: 950px) {
+    display: none;
+  }
 }
 
 .countBlock {
@@ -116,6 +160,10 @@
   font-size: 20px;
   line-height: 26px;
   color: #FFFFFF;
+  @media (max-width: 730px) {
+    grid-column: 4 / 12;
+    grid-row: 2 / 2;
+  }
 }
 
 .itemButton {
@@ -145,6 +193,11 @@
   font-size: 20px;
   line-height: 24px;
   color: #FFFFFF;
+  text-align: center;
+  @media (max-width: 730px) {
+    grid-column: 8 / 12;
+    grid-row: 2 / 2;
+  }
 }
 
 .itemDelete {
@@ -160,6 +213,10 @@
   transition: all 0.3s ease-out 0s;
   &:hover {
     background: rgba(97, 137, 103, 0.5);
+  }
+  @media (max-width: 730px) {
+    grid-column: 12 / 12;
+    grid-row: 2 / 2;
   }
 }
 
@@ -177,6 +234,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  @media (max-width: 520px) {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 
 .cartBottomBody {
@@ -205,6 +267,7 @@
       margin-bottom: 11px;
     }
   }
+
 }
 
 .cartOrderButton {

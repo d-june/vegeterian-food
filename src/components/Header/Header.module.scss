@@ -1,9 +1,25 @@
 .header {
+  background: #403C3B;
+  box-shadow: 0px 30px 60px rgba(34, 31, 32, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+.headerWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 60px;
-  padding: 24px 0;
+
+  @media (max-width: 1000px) {
+    gap: 30px;
+  }
+  @media (max-width: 500px) {
+    gap: 20px;
+  }
 }
 
 .logo {
@@ -13,13 +29,30 @@
 }
 
 .search {
+
+}
+.searchDesktop {
   flex: 1 1 auto;
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
+.searchMobile {
+  margin-top: 30px;
+  @media (min-width: 701px) {
+    display: none;
+
+  }
 }
 
 .contacts {
   display: flex;
   gap: 10px;
   align-items: center;
+  @media (max-width: 960px) {
+    display: none;
+  }
 }
 
 .contactsIcon {
@@ -31,7 +64,9 @@
   height: 32px;
   border-radius: 50%;
   svg {
+    font-weight: bold;
     font-size: 18px;
+    color: #FFFFFF;
   }
 }
 
@@ -51,36 +86,51 @@
 .cart {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: rgba(97, 137, 103, 1);
   border-radius: 10px;
   color: #fff;
   font-weight: bold;
-  padding: 10px;
+  padding: 8px 18px;
   transition: all 0.3s ease-out 0s;
   &:hover {
     background: rgba(97, 137, 103, 0.5);
   }
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 }
 .cartTitle {
   border-right: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 8px;
+  padding: 10px 14px 10px 0;
+  @media (max-width: 400px) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 0px 10px 0;
+  }
 }
 
-.cartIcon {
-  position: relative;
-  padding: 8px 12px 8px 8px;
+.cartTotalCount {
+  margin-left: 14px;
   span {
-    position: absolute;
-    top: 0px;
-    right: 2px;
+    width: 24px;
+    height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 18px;
-    height: 18px;
-    background: #fff;
-    border-radius: 50%;
-    color: #618967;
+    padding: 5px;
+    background: #FFFFFF;
     font-size: 12px;
+    line-height: 14px;
+    color: #403C3B;
+    border-radius: 50%;
+  }
+  svg {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  @media (max-width: 400px) {
+    margin-left: 0px;
+    margin-top: 10px;
   }
 }
