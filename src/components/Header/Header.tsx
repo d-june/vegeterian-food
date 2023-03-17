@@ -66,11 +66,13 @@ const Header: FC = () => {
             </Link>
           )}
         </div>
-        <div>
-          <div className={styles.search + " " + styles.searchMobile}>
-            {location.pathname !== "/cart" && <Search />}
+        {location.pathname !== "/cart" && (
+          <div>
+            <div className={styles.search + " " + styles.searchMobile}>
+              {location.pathname !== "/cart" && <Search />}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </header>
   );
